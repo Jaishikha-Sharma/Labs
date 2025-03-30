@@ -1,4 +1,23 @@
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+/* Hide scrollbar for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
 
+/* Hide scrollbar for Firefox */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
+/* Ensure scrolling is still enabled */
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+}

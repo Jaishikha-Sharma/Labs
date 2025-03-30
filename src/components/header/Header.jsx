@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/images/headerlogo-1.jpg";
 
@@ -7,9 +7,11 @@ const Header = () => {
   return (
     <header className="header">
       <div className="top-bar">
-        <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" style={{width:"30%"}}/>
         <div className="contact-info font-size">
-          <span>Contact Us</span>
+          <Link style={{ color: "white" }} to="/contact">
+            Contact Us
+          </Link>
           <span className="icon-bg">
             <i className="fas fa-phone"></i>
           </span>
@@ -20,27 +22,33 @@ const Header = () => {
           jagdambalab4@gmail.com
         </div>
       </div>
+
       <nav className="navbar">
-        <ul>
-          <li>
-            <Link to="/">HOME</Link>
-          </li>
-          <li>
-            <Link to="/about">ABOUT US</Link>
-          </li>
-          <li>
-            <Link to="/services">OUR SERVICES</Link>
-          </li>
-          <li>
-            <Link to="/gallery">GALLERY</Link>
-          </li>
-          <li>
-            <Link to="/certificates">CERTIFICATES</Link>
-          </li>
-          <li>
-            <Link to="/contact">CONTACT US</Link>
-          </li>
-        </ul>
+        <div className="navbar-container container">
+          <input type="checkbox" id="menu-toggle" />
+          <div className="hamburger-lines">
+            <span className="line line1"></span>
+            <span className="line line2"></span>
+            <span className="line line3"></span>
+          </div>
+          <ul className="menu-items">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/services">Our Services</Link>
+            </li>
+            <li>
+              <Link to="/gallery">Gallery</Link>
+            </li>
+            <li>
+              <Link to="/certificates">Certificates</Link>
+            </li>
+          </ul>
+        </div>
         <div className="nav-right">
           <div className="search-container">
             <i className="fas fa-map-marker-alt location-icon"></i>

@@ -7,7 +7,8 @@ import Contact from "./components/contactUs/Contact";
 import Gallery from "./components/gallery/Gallery";
 import Services from "./components/services/Services";
 import Certificates from "./components/certificates/Certificates"
-
+import "./App.css"
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/certificates" element={<Certificates />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
