@@ -1,23 +1,21 @@
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-/* Hide scrollbar for Chrome, Safari, and Edge */
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  display: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400&display=swap');
 
-/* Hide scrollbar for Firefox */
 * {
-  scrollbar-width: none;
-  -ms-overflow-style: none; 
+  font-family: 'PT Sans', sans-serif;
 }
 
-/* Ensure scrolling is still enabled */
-body {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 100vh;
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 5px;
 }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004aad; 
+  border-radius: 10px; 
+}
+
