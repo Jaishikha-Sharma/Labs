@@ -6,6 +6,7 @@ import FeatureCards from "./featureCard/FeatureCard";
 import { Carousel } from "react-bootstrap";
 import AboutUs from "./about-us-container/About-us";
 import ServiceCard from "./Services/ServiceCard";
+import Testimonial from "../../assets/images/Capture.png"
 
 const Home = () => {
   return (
@@ -77,7 +78,45 @@ const Home = () => {
         <p className="services-subtitle">SERVICES</p>
         <h2 className="services-title">Our Best Services</h2>
       </div>
-      <ServiceCard/>
+      <ServiceCard />
+      <div>
+        <div className="services-section text-center mt-5">
+          <p className="services-subtitle">Testimonials</p>
+          <h2 className="services-title">Customers Reviews</h2>
+        </div>
+        {/* New Carousel Section */}
+        <div className="row mt-5 align-items-center custom-carousel-section">
+          <div className="col-md-6">
+            <img src={Testimonial} alt="Carousel Static" className="img-fluid" />
+          </div>
+          <div className="col-md-6">
+            <Carousel>
+              <Carousel.Item>
+                <div className="carousel-content">
+                  <h3>Quality Healthcare</h3>
+                  <p>
+                    Providing the best healthcare services for all your needs.
+                  </p>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="carousel-content">
+                  <h3>Advanced Technology</h3>
+                  <p>
+                    We use state-of-the-art technology for accurate results.
+                  </p>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="carousel-content">
+                  <h3>Affordable Prices</h3>
+                  <p>Get the best healthcare services at affordable prices.</p>
+                </div>
+              </Carousel.Item>
+            </Carousel>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
