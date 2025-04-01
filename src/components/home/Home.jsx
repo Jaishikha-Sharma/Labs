@@ -1,22 +1,32 @@
 import React from "react";
 import heroImage from "../../assets/images/hero.png";
-import reportImg from "../../assets/images/img.webp"; // WebP Image
+import reportImg from "../../assets/images/img.webp";
 import "./Home.css";
+import FeatureCards from "./featureCard/FeatureCard";
+import { Carousel } from "react-bootstrap";
+import AboutUs from "./about-us-container/About-us";
+import ServiceCard from "./Services/ServiceCard";
 
 const Home = () => {
   return (
     <div className="home">
       <div className="row mt-2">
         <div className="col-lg-8">
-          <div className="image-container">
-            <img
-              src={heroImage}
-              alt="Laboratory"
-              className="home-image"
-              style={{ width: "100%" }}
-            />
+          <div className="carousel-container">
+            <Carousel className="custom-carousel">
+              <Carousel.Item>
+                <img src={heroImage} alt="Slide 1" className="d-block w-100" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={heroImage} alt="Slide 2" className="d-block w-100" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img src={heroImage} alt="Slide 3" className="d-block w-100" />
+              </Carousel.Item>
+            </Carousel>
           </div>
         </div>
+
         <div className="col-lg-4">
           <div className="test-card">
             <h3 className="card-title">BOOK A TEST ONLINE</h3>
@@ -38,10 +48,12 @@ const Home = () => {
               </span>
             </button>
 
-            <div className="card-options mt-5">
+            <div className="card-options mt-3">
               <div className="option">
                 <img src={reportImg} alt="Download Report" />
-                <p style={{ fontSize: "12px" , marginBottom: "0" }}>Download Report</p>
+                <p style={{ fontSize: "12px", marginBottom: "0" }}>
+                  Download Report
+                </p>
               </div>
               <div className="option">
                 <img src={reportImg} alt="Upload Prescription" />
@@ -55,6 +67,17 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div>
+        <FeatureCards />
+      </div>
+      <div className="mt-5">
+        <AboutUs />
+      </div>
+      <div className="services-section text-center mt-5">
+        <p className="services-subtitle">SERVICES</p>
+        <h2 className="services-title">Our Best Services</h2>
+      </div>
+      <ServiceCard/>
     </div>
   );
 };

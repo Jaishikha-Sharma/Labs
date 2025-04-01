@@ -2,12 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/images/headerlogo-1.jpg";
-
+import HeaderImg from "../../assets/images/top-bg.webp";
 const Header = () => {
   return (
     <header className="header">
-      <div className="top-bar">
-        <img src={logo} alt="Logo" style={{width:"30%"}}/>
+      <div
+        className="top-bar"
+        style={{
+          backgroundImage: `url(${HeaderImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <img
+          src={logo}
+          alt="Logo"
+          style={{ width: "25%", marginLeft: "30px" }}
+        />
         <div className="contact-info font-size">
           <Link style={{ color: "white" }} to="/contact">
             Contact Us

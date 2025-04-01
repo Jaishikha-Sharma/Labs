@@ -23,6 +23,7 @@
 .contact-info {
   display: flex;
   gap: 15px;
+  margin-right: 90px;
 }
 
 .navbar {
@@ -95,8 +96,8 @@
   background-color: #ffdb4d;
 }
 .font-size {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .html {

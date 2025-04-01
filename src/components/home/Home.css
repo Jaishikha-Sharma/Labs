@@ -1,137 +1,164 @@
 .home {
-    padding: 20px;
-  }
-  
-  .card-title {
-    color: #0057b3;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 5px;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .search-btn {
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    background-color: #fecc4e;
-    width: 35px;
-  }
-  
-  .or-text {
-    margin: 25px 0;
-  }
-  
-  .popular-tests-btn {
-    background : #1259bf;
-    color: white;
-    padding: 9px;
-    border: none;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 13px;
-    border-radius: 30px;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.20);
-    
+  padding: 20px;
 }
-  .card-options {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-  
-  .option {
-    background: #0057b3;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    flex: 1;
-    margin: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; 
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.20);
-  }
-  
-  .option img {
-    width: 65px;
-    height: 45px;
-    object-fit: contain;
-    margin-bottom: 5px;
-    margin-top: -12px;
-    background-color: white;
-    border-radius: 5px;
-  }
-  
-  .home .row {
-    display: flex;
-    align-items: stretch; /* Ensures both columns have equal height */
-  }
-  
-  .image-container {
-    height: 100%; /* Matches the height of the card */
-    display: flex;
-  }
-  
-  .home-image {
-    width: 100%;
-    object-fit: cover; /* Ensures the image scales well */
-  }
-  
+
+.card-title {
+  color: #0057b3;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.custom-carousel {
+  height: 100%;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+.row {
+  display: flex;
+  align-items: stretch;
+}
+
+.carousel-container,
+.test-card {
+  height: 100%;
+}
+
+.search-btn {
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #fecc4e;
+  width: 35px;
+}
+
+.or-text {
+  margin: 25px 0;
+}
+
+.popular-tests-btn {
+  background: #1259bf;
+  color: white;
+  padding: 9px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 30px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.card-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.option {
+  background: #0057b3;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  flex: 1;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option img {
+  width: 65px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 5px;
+  margin-top: -12px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.home .row {
+  display: flex;
+  align-items: stretch;
+}
+
+.image-container {
+  height: 100%;
+  display: flex;
+}
+
+.home-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.test-card {
+  background: #f1f6fc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.search-input1 {
+  padding: 12px; /* Remove extra left padding */
+  border-radius: 100px;
+  width: 338px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.search-input1::placeholder {
+  text-align: left;
+}
+
+.services-subtitle {
+  color: blue;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.services-title {
+  font-weight: bold;
+  color: black;
+}
+
+@media (max-width: 768px) {
   .test-card {
     background: #f1f6fc;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 100%; 
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 40px;
   }
-  .search-input1 {
-    padding: 12px; /* Remove extra left padding */
-    border-radius: 100px;
-    width: 338px;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    box-shadow: none;
-  }
-  
-  /* Ensure placeholder starts from the very left */
-  .search-input1::placeholder {
-    text-align: left;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .test-card{
-      background: #f1f6fc;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      height: 100%; 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-top: 40px;
-    }
-  }
+}
