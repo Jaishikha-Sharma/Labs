@@ -6,7 +6,7 @@ import FeatureCards from "./featureCard/FeatureCard";
 import { Carousel } from "react-bootstrap";
 import AboutUs from "./about-us-container/About-us";
 import ServiceCard from "./Services/ServiceCard";
-import Testimonial from "../../assets/images/Capture.png"
+import Testimonial from "../../assets/images/Capture.png";
 
 const Home = () => {
   return (
@@ -87,7 +87,11 @@ const Home = () => {
         {/* New Carousel Section */}
         <div className="row mt-5 align-items-center custom-carousel-section">
           <div className="col-md-6">
-            <img src={Testimonial} alt="Carousel Static" className="img-fluid" />
+            <img
+              src={Testimonial}
+              alt="Carousel Static"
+              className="img-fluid"
+            />
           </div>
           <div className="col-md-6">
             <Carousel>
@@ -115,6 +119,34 @@ const Home = () => {
               </Carousel.Item>
             </Carousel>
           </div>
+        </div>
+      </div>
+      <div className="row mt-5">
+        <div className="col-lg-6">
+          <h2>Office Location</h2>
+          <iframe
+            title="Delhi Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224105.29330603906!2d76.8130636!3d28.6472799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02210df2a26f%3A0x400b36d68e4d1764!2sDelhi!5e0!3m2!1sen!2sin!4v1645286318667!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style={{ border: 0, borderRadius: "10px" }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div className="col-lg-6">
+          <h2>Laboratory Location</h2>
+          <iframe
+            title="Delhi Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224105.29330603906!2d76.8130636!3d28.6472799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02210df2a26f%3A0x400b36d68e4d1764!2sDelhi!5e0!3m2!1sen!2sin!4v1645286318667!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style={{ border: 0, borderRadius: "10px" }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>

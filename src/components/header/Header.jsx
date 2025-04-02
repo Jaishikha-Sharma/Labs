@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/images/headerlogo-1.jpg";
 import HeaderImg from "../../assets/images/top-bg.webp";
+import AuthModal from "../login/AuthModal.jsx";
+
 const Header = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <header className="header">
       <div
@@ -61,16 +66,12 @@ const Header = () => {
           </ul>
         </div>
         <div className="nav-right">
-          <div className="search-container">
-            <i className="fas fa-map-marker-alt location-icon"></i>
-            <input
-              type="text"
-              placeholder="Search Location"
-              className="search-input"
-            />
-          </div>
+          <button className="user-avatar" onClick={() => setIsModalOpen(true)}>
+            <i className="fas fa-user"></i>
+          </button>
         </div>
       </nav>
+      {isModalOpen && <AuthModal onClose={() => setIsModalOpen(false)} />}
     </header>
   );
 };
