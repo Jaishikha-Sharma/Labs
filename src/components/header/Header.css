@@ -15,7 +15,6 @@ body {
   overflow: hidden;
 }
 
-
 ul {
   list-style: none;
 }
@@ -110,13 +109,15 @@ section {
   color: var(--clr-btn);
 }
 
+/* Default styles */
 .search-profile {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: auto; /* Pushes to the right */
+  margin-left: auto;
 }
 
+/* Adjust search input */
 .search-input {
   padding: 8px 12px;
   border: 1px solid #c4a484;
@@ -125,6 +126,8 @@ section {
   font-size: 14px;
   background-color: #fff;
   color: #333;
+  transition: width 0.3s ease;
+  width: 200px;
 }
 
 .search-btn {
@@ -140,6 +143,7 @@ section {
   background-color: #714c2e;
 }
 
+/* User profile icon */
 .profile-icon {
   width: 36px;
   height: 36px;
@@ -155,6 +159,52 @@ section {
 .profile-icon i {
   font-size: 18px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-profile {
+    gap: 6px;
+  }
+
+  .search-input {
+    width: 140px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .search-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .profile-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-icon i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  @media (max-width: 768px) {
+    .search-profile .search-input,
+    .search-profile .search-btn {
+      display: none;
+    }
+  }
+  .profile-icon {
+    width: 28px;
+    height: 28px;
+    margin-left: 200px;
+  }
+
+  .profile-icon i {
+    font-size: 14px;
+  }
+}
+
 
 .btn.transparent,
 .btn.solid:hover {

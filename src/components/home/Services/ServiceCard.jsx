@@ -27,6 +27,15 @@ const Services = () => {
         </div>
         <div className="service-card">
         <img src="https://i.imgur.com/k9ZY0S7.png" alt="img" />
+          <h3>Soil Testing</h3>
+          <p>
+            ECMA Laboratory conducts comprehensive soil testing, analyzing
+            nutrient content and soil quality.
+          </p>
+          <button className="discover-btn">Discover More →</button>
+        </div>
+        <div className="service-card">
+        <img src="https://i.imgur.com/k9ZY0S7.png" alt="img" />
           <h3>Environment Testing</h3>
           <p>
             ECMA Laboratory specializes in comprehensive environmental testing,

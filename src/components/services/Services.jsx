@@ -11,23 +11,6 @@ const Services = () => {
 
   return (
     <div>
-      <div>
-        <img src={ContactUsImg} alt="Contact-us" style={{ width: "100%" }} />
-      </div>
-      <div className="about-container">
-        <div className="about-text">
-          <h4>
-            Jagdamba Laboratories providing high quality and extremely
-            cost-effective analytical services to the Industries, Processor.
-          </h4>
-          <br />
-          <p>
-            We at Jagdamba lab, provide complete testing services under one roof
-            i.e. testing of pharmaceuticals drugs, alcoholic drinks, water,
-            metals, oil & fats, soil, stones & food items.
-          </p>
-        </div>
-      </div>
 
       {/* Accordion Section */}
       <div className="accordion">

@@ -20,7 +20,7 @@ const Header = () => {
                 <Link to="/">Home</Link>
               </li>
               <li className="nav-link" style={{ "--i": ".85s" }}>
-                <Link to="#">
+                <Link to="/services">
                   Services <i className="fas fa-caret-down"></i>
                 </Link>
                 <div className="dropdown">
@@ -43,28 +43,16 @@ const Header = () => {
                 </div>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/about">Galllery</Link>
+                <Link to="/gallery">Galllery</Link>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/about">Certificates</Link>
+                <Link to="/certificates">Certificates</Link>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/about">Blogs</Link>
+                <Link to="/blogs">Blogs</Link>
               </li>
-              <li className="nav-link" style={{ "--i": ".85s" }}>
-                <Link to="#">
-                  About <i className="fas fa-caret-down"></i>
-                </Link>
-                <div className="dropdown">
-                  <ul>
-                    <li className="dropdown-link">
-                      <Link to="#">Link 1</Link>
-                    </li>
-                    <li className="dropdown-link">
-                      <Link to="#">Link 2</Link>
-                    </li>
-                  </ul>
-                </div>
+              <li className="nav-link" style={{ "--i": "1.35s" }}>
+                <Link to="/about">About</Link>
               </li>
             </ul>
           </div>
