@@ -1,154 +1,121 @@
 import React from "react";
-import heroImage from "../../assets/images/hero.png";
-import reportImg from "../../assets/images/img.webp";
 import "./Home.css";
-import FeatureCards from "./featureCard/FeatureCard";
-import { Carousel } from "react-bootstrap";
-import AboutUs from "./about-us-container/About-us";
-import ServiceCard from "./Services/ServiceCard";
-import Testimonial from "../../assets/images/Capture.png";
+import Services from "./Services/ServiceCard";
+import ChatWidget from "../chatBot/ChatBot";
+import TestimonialSection from "./testimonial/Testimonial";
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="row mt-2">
-        <div className="col-lg-8">
-          <div className="carousel-container">
-            <Carousel className="custom-carousel">
-              <Carousel.Item>
-                <img src={heroImage} alt="Slide 1" className="d-block w-100" />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img src={heroImage} alt="Slide 2" className="d-block w-100" />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img src={heroImage} alt="Slide 3" className="d-block w-100" />
-              </Carousel.Item>
-            </Carousel>
-          </div>
-        </div>
-
-        <div className="col-lg-4">
-          <div className="test-card">
-            <h3 className="card-title">BOOK A TEST ONLINE</h3>
-            <div className="search-bar">
-              <input
-                type="text"
-                placeholder="Search Test and Packages"
-                className="search-input1"
-              />
-              <button className="search-btn">
-                <i className="fas fa-search"></i>
-              </button>
-            </div>
-            <p className="or-text">OR</p>
-            <button className="popular-tests-btn">
-              Choose Popular Tests / Packages{" "}
-              <span className="icon-bg">
-                <i className="fas fa-arrow-right"></i>
-              </span>
-            </button>
-
-            <div className="card-options mt-3">
-              <div className="option">
-                <img src={reportImg} alt="Download Report" />
-                <p style={{ fontSize: "12px", marginBottom: "0" }}>
-                  Download Report
-                </p>
-              </div>
-              <div className="option">
-                <img src={reportImg} alt="Upload Prescription" />
-                <p style={{ fontSize: "12px" }}>Upload Prescription</p>
-              </div>
-              <div className="option">
-                <img src={reportImg} alt="Find Nearest Centre" />
-                <p style={{ fontSize: "12px" }}>Find Nearest Centre</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Scrolling Marquee */}
+      <div className="marquee-container">
+        <marquee className="marquee-text">
+          Comprehensive Testing for Soil, Water, Environment, Minerals, and Ores
+          - Your Trusted Partner in Quality Assurance
+        </marquee>
       </div>
-      <div>
-        <FeatureCards />
-      </div>
-      <div className="mt-5">
-        <AboutUs />
-      </div>
-      <div className="services-section text-center mt-5">
-        <p className="services-subtitle">SERVICES</p>
-        <h2 className="services-title">Our Best Services</h2>
-      </div>
-      <ServiceCard />
-      <div>
-        <div className="services-section text-center mt-5">
-          <p className="services-subtitle">Testimonials</p>
-          <h2 className="services-title">Customers Reviews</h2>
-        </div>
-        {/* New Carousel Section */}
-        <div className="row mt-5 align-items-center custom-carousel-section">
-          <div className="col-md-6">
+      <div id="carouselExample" className="carousel slide">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
             <img
-              src={Testimonial}
-              alt="Carousel Static"
-              className="img-fluid"
+              src="https://i.imgur.com/C58NY3c.png"
+              className="d-block w-100"
+              alt="..."
             />
           </div>
-          <div className="col-md-6">
-            <Carousel>
-              <Carousel.Item>
-                <div className="carousel-content">
-                  <h3>Quality Healthcare</h3>
-                  <p>
-                    Providing the best healthcare services for all your needs.
-                  </p>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-content">
-                  <h3>Advanced Technology</h3>
-                  <p>
-                    We use state-of-the-art technology for accurate results.
-                  </p>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-content">
-                  <h3>Affordable Prices</h3>
-                  <p>Get the best healthcare services at affordable prices.</p>
-                </div>
-              </Carousel.Item>
-            </Carousel>
+          <div className="carousel-item">
+            <img
+              src="https://i.imgur.com/C58NY3c.png"
+              className="d-block w-100"
+              alt="..."
+            />
           </div>
+          <div className="carousel-item">
+            <img
+              src="https://i.imgur.com/C58NY3c.png"
+              className="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+      {/* New Section Below Carousel */}
+      <div className="features-section">
+        <div className="feature">
+          <i className="fas fa-hand-holding-heart"></i>
+          <p>Helpful Advice</p>
+        </div>
+        <div className="feature">
+          <i className="fas fa-user-tie"></i>
+          <p>Reliable Experts</p>
+        </div>
+        <div className="feature">
+          <i className="fas fa-check-circle"></i>
+          <p>Quality Assurance</p>
+        </div>
+        <div className="feature">
+          <i className="fas fa-lightbulb"></i>
+          <p>Unique Technology</p>
         </div>
       </div>
       <div className="row mt-5">
-        <div className="col-lg-6">
-          <h2>Office Location</h2>
-          <iframe
-            title="Delhi Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224105.29330603906!2d76.8130636!3d28.6472799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02210df2a26f%3A0x400b36d68e4d1764!2sDelhi!5e0!3m2!1sen!2sin!4v1645286318667!5m2!1sen!2sin"
-            width="100%"
-            height="400"
-            style={{ border: 0, borderRadius: "10px" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div
+          className="col-lg-4"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img src="https://i.imgur.com/k9ZY0S7.png" alt="img" />
         </div>
-        <div className="col-lg-6">
-          <h2>Laboratory Location</h2>
-          <iframe
-            title="Delhi Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224105.29330603906!2d76.8130636!3d28.6472799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02210df2a26f%3A0x400b36d68e4d1764!2sDelhi!5e0!3m2!1sen!2sin!4v1645286318667!5m2!1sen!2sin"
-            width="100%"
-            height="400"
-            style={{ border: 0, borderRadius: "10px" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div className="col-lg-8">
+          <div className="lab-text">
+            <button className="lab-badge">Laboratory</button>
+            <h2>We Provide Reliable & High-Quality Service</h2>
+            <p style={{ textAlign: "justify" }}>
+              Welcome to the Earth Crust Minerals Analytical Laboratory. We
+              provide Earth Crust Minerals Metals, Cement, Soil, Water, Oil &
+              Environment, Minerals and Mining Consultancy Services.
+              High-quality service involves consistently meeting or exceeding
+              customer expectations through professionalism, attention to
+              detail, and personalized care. It builds trust, enhances
+              satisfaction, and fosters long-term relationships, ensuring
+              customer loyalty and business success.
+            </p>
+            <ul>
+              <li>✅ Modify the theming of the prebuilt automation platform</li>
+              <li>✅ Override the default strings for any element</li>
+            </ul>
+            <button className="lab-badge">Get In Touch</button>
+          </div>
         </div>
       </div>
+      <div className="features-section mt-5">
+        <div className="feature">
+          <i className="fas fa-clock"></i>
+          <p>128+</p>
+          <p>Hours Generated</p>
+        </div>
+        <div className="feature">
+          <i class="fa-solid fa-microscope"></i>
+          <p>37K+</p>
+          <p>Task Completed</p>
+        </div>
+        <div className="feature">
+          <i className="fas fa-users"></i>
+          <p>20K+</p>
+          <p>Worlwide Users</p>
+        </div>
+        <div className="feature">
+          <i class="fas fa-project-diagram"></i>
+          <p>18K+</p>
+          <p>Project Completed</p>
+        </div>
+      </div>
+      <Services />
+      <TestimonialSection />
+      <ChatWidget />
     </div>
   );
 };

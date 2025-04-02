@@ -1,46 +1,71 @@
+.footer {
+  background-color: #2E1C06;
+  color: #F4F0E5;
+  padding: 40px 0;
+}
 
-  .footer h6 {
-    color: #000;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  .footer ul {
-    padding: 0;
-  }
-  
-  .footer ul li {
-    font-size: 13px;
-    color: #555;
-    cursor: pointer;
-    margin-bottom: 5px;
-  }
-  
-  .footer ul li:hover {
-    text-decoration: underline;
-  }
-  
-  /* Blue Section */
-  .footer-bottom {
-    background: #0052a5; /* Blue background */
-    color: white;
-    font-size: 13px;
-    padding: 20px 0;
-  }
-  
-  .footer-bottom a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-  }
-  
-  .footer-bottom a:hover {
-    text-decoration: underline;
-  }
+.footer-logo {
+  width: 60px;
+}
 
-  .text-white{
-    font-size: 15px;
-    color: white;
-  }
+.footer-description {
+  font-size: 12px;
+  margin-top: 10px;
   
-  
+}
+
+.footer-heading {
+  font-weight: bold;
+  color: #A26B28;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.footer-list li:hover {
+  text-decoration: underline;
+}
+
+.footer-map {
+  width: 100%;
+  height: 150px;
+  border: 0;
+}
+
+.footer-bottom {
+  background-color: #c6a76f;
+  padding: 15px 0;
+  margin-bottom: -40px;
+  font-size: 10px;
+}
+
+.footer-text {
+  color: #FFFFFF;
+}
+
+.footer-link {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-icon {
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  color: #A26B28;
+}

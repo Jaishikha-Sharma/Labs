@@ -1,76 +1,87 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import logo from "../../assets/images/headerlogo-1.jpg";
-import HeaderImg from "../../assets/images/top-bg.webp";
 import AuthModal from "../login/AuthModal.jsx";
 
 const Header = () => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <header className="header">
-      <div
-        className="top-bar"
-        style={{
-          backgroundImage: `url(${HeaderImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <img
-          src={logo}
-          alt="Logo"
-          style={{ width: "25%", marginLeft: "30px" }}
-        />
-        <div className="contact-info font-size">
-          <Link style={{ color: "white" }} to="/contact">
-            Contact Us
-          </Link>
-          <span className="icon-bg">
-            <i className="fas fa-phone"></i>
-          </span>
-          +91 7357668997
-          <span className="icon-bg">
-            <i className="fas fa-envelope"></i>
-          </span>
-          jagdambalab4@gmail.com
+    <header>
+      <div className="container">
+        <input type="checkbox" name="check" id="check" />
+        <div className="logo-container">
+          <img src="https://i.imgur.com/njJQdAg.png"alt="logo" style={{width:"68px"}}/>
         </div>
-      </div>
-
-      <nav className="navbar">
-        <div className="navbar-container container">
-          <input type="checkbox" id="menu-toggle" />
-          <div className="hamburger-lines">
-            <span className="line line1"></span>
-            <span className="line line2"></span>
-            <span className="line line3"></span>
+        <div className="nav-btn">
+          <div className="nav-links">
+            <ul>
+              <li className="nav-link" style={{ "--i": ".6s" }}>
+                <Link to="/">Home</Link>
+              </li>
+              <li className="nav-link" style={{ "--i": ".85s" }}>
+                <Link to="#">
+                  Services <i className="fas fa-caret-down"></i>
+                </Link>
+                <div className="dropdown">
+                  <ul>
+                    <li className="dropdown-link">
+                      <Link to="#">Link 1</Link>
+                    </li>
+                    <li className="dropdown-link">
+                      <Link to="#">Link 2</Link>
+                    </li>
+                    <li className="dropdown-link">
+                      <Link to="#">
+                        Link 3 <i className="fas fa-caret-down"></i>
+                      </Link>
+                    </li>
+                    <li className="dropdown-link">
+                      <Link to="#">Link 4</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="nav-link" style={{ "--i": "1.35s" }}>
+                <Link to="/about">Galllery</Link>
+              </li>
+              <li className="nav-link" style={{ "--i": "1.35s" }}>
+                <Link to="/about">Certificates</Link>
+              </li>
+              <li className="nav-link" style={{ "--i": "1.35s" }}>
+                <Link to="/about">Blogs</Link>
+              </li>
+              <li className="nav-link" style={{ "--i": ".85s" }}>
+                <Link to="#">
+                  About <i className="fas fa-caret-down"></i>
+                </Link>
+                <div className="dropdown">
+                  <ul>
+                    <li className="dropdown-link">
+                      <Link to="#">Link 1</Link>
+                    </li>
+                    <li className="dropdown-link">
+                      <Link to="#">Link 2</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </div>
-          <ul className="menu-items">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/services">Our Services</Link>
-            </li>
-            <li>
-              <Link to="/gallery">Gallery</Link>
-            </li>
-            <li>
-              <Link to="/certificates">Certificates</Link>
-            </li>
-          </ul>
         </div>
-        <div className="nav-right">
-          <button className="user-avatar" onClick={() => setIsModalOpen(true)}>
+        <div className="search-profile">
+          <input type="text" className="search-input" placeholder="Type to start search" />
+          <button className="search-btn">Search</button>
+          <div className="profile-icon" onClick={() => setIsModalOpen(true)}>
             <i className="fas fa-user"></i>
-          </button>
+          </div>
         </div>
-      </nav>
+        <div className="hamburger-menu-container">
+          <div className="hamburger-menu">
+            <div></div>
+          </div>
+        </div>{" "}
+      </div>
       {isModalOpen && <AuthModal onClose={() => setIsModalOpen(false)} />}
     </header>
   );

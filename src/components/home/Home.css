@@ -1,164 +1,119 @@
-.home {
-  padding: 20px;
-}
-
-.card-title {
-  color: #0057b3;
-  font-size: 18px;
+.marquee-container {
+  width: 100%;
+  background-color: #d5ae6f;
+  color: white;
+  padding: 5px 0;
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 5px;
-  border-radius: 5px;
+  white-space: nowrap;
   overflow: hidden;
 }
-.custom-carousel {
-  height: 100%;
-}
 
-.carousel-item img {
-  height: 400px;
-  object-fit: cover;
+.marquee-text {
+  display: inline-block;
+  font-family: Arial, sans-serif;
 }
-.row {
+.lab-section {
   display: flex;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
 }
 
-.carousel-container,
-.test-card {
-  height: 100%;
+.lab-content {
+  display: flex;
+  max-width: 1000px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.search-btn {
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  background-color: #fecc4e;
-  width: 35px;
-}
-
-.or-text {
-  margin: 25px 0;
-}
-
-.popular-tests-btn {
-  background: #1259bf;
-  color: white;
-  padding: 9px;
-  border: none;
+.lab-image img {
   width: 100%;
+  height: auto;
+  border-radius: 12px 0 0 12px;
+}
+
+.lab-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lab-badge {
+  background: #091b4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.lab-text h2 {
+  font-size: 22px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.lab-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.lab-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lab-text li {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.contact-button {
+  background: #091b4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 13px;
-  border-radius: 30px;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
-.card-options {
-  display: flex;
-  justify-content: space-between;
   margin-top: 15px;
 }
 
-.option {
-  background: #0057b3;
+.contact-button:hover {
+  background: #0d255f;
+}
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #8B5E3B;
+  padding: 20px;
   color: white;
-  padding: 10px;
   text-align: center;
-  border-radius: 5px;
+}
+
+.feature {
   flex: 1;
-  margin: 5px;
-  font-size: 14px;
-  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.option img {
-  width: 65px;
-  height: 45px;
-  object-fit: contain;
-  margin-bottom: 5px;
-  margin-top: -12px;
-  background-color: white;
-  border-radius: 5px;
+.feature:last-child {
+  border-right: none;
 }
 
-.home .row {
-  display: flex;
-  align-items: stretch;
-}
-
-.image-container {
-  height: 100%;
-  display: flex;
-}
-
-.home-image {
-  width: 100%;
-  object-fit: cover;
-}
-
-.test-card {
-  background: #f1f6fc;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.search-input1 {
-  padding: 12px; /* Remove extra left padding */
-  border-radius: 100px;
-  width: 338px;
-  font-size: 14px;
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-
-.search-input1::placeholder {
-  text-align: left;
-}
-
-.services-subtitle {
-  color: blue;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.services-title {
-  font-weight: bold;
-  color: black;
-}
-
-@media (max-width: 768px) {
-  .test-card {
-    background: #f1f6fc;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 40px;
-  }
+.feature i {
+  font-size: 24px;
+  margin-bottom: 8px;
 }
