@@ -415,7 +415,7 @@ section {
   .nav-btn {
     position: fixed;
     height: calc(100vh - 3rem);
-    top: 6rem;
+    top: 79px;
     left: 0;
     width: 100%;
     background-color: #2e1c06;
