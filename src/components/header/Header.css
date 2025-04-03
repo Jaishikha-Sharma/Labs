@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --clr-bg-header: #573505;
+  --clr-bg-header: #3e2003;
   --clr-btn: #573505;
   --clr-dropdown: #d5ae6f;
   --clr-nav-hover: #d5ae6f;
@@ -124,7 +124,6 @@ section {
   border-radius: 5px;
   outline: none;
   font-size: 14px;
-  background-color: #fff;
   color: #333;
   transition: width 0.3s ease;
   width: 200px;
@@ -147,7 +146,7 @@ section {
 .profile-icon {
   width: 36px;
   height: 36px;
-  background-color: #8b5e34;
+  background-color: #d3a070;
   color: white;
   display: flex;
   align-items: center;

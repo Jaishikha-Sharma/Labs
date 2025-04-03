@@ -10,7 +10,7 @@ const About = () => {
 
   return (
     <>
-      {/* Banner Image with Reduced Height */}
+      {/* Banner Image */}
       <div>
         <img
           src="https://i.imgur.com/8Ie7SqD.jpeg"

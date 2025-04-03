@@ -26,18 +26,21 @@ const Header = () => {
                 <div className="dropdown">
                   <ul>
                     <li className="dropdown-link">
-                      <Link to="#">Link 1</Link>
+                      <Link to="#">Water Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="#">Link 2</Link>
+                      <Link to="#">Soil Testing</Link>
                     </li>
                     <li className="dropdown-link">
                       <Link to="#">
-                        Link 3 <i className="fas fa-caret-down"></i>
+                       Food Testing 
                       </Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="#">Link 4</Link>
+                      <Link to="#">Herbal Testing</Link>
+                    </li>
+                    <li className="dropdown-link">
+                      <Link to="#">Enviornmental Testing</Link>
                     </li>
                   </ul>
                 </div>
