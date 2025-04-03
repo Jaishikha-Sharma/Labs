@@ -19,6 +19,9 @@ const Header = () => {
               <li className="nav-link" style={{ "--i": ".6s" }}>
                 <Link to="/">Home</Link>
               </li>
+              <li className="nav-link" style={{ "--i": "1.35s" }}>
+                <Link to="/about">About</Link>
+              </li>
               <li className="nav-link" style={{ "--i": ".85s" }}>
                 <Link to="/services">
                   Services <i className="fas fa-caret-down"></i>
@@ -54,9 +57,7 @@ const Header = () => {
               <li className="nav-link" style={{ "--i": "1.35s" }}>
                 <Link to="/blogs">Blogs</Link>
               </li>
-              <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/about">About</Link>
-              </li>
+             
             </ul>
           </div>
         </div>
