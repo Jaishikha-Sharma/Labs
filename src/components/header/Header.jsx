@@ -26,21 +26,21 @@ const Header = () => {
                 <div className="dropdown">
                   <ul>
                     <li className="dropdown-link">
-                      <Link to="#">Water Testing</Link>
+                      <Link to="/water-Testing">Water Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="#">Soil Testing</Link>
+                      <Link to="/soil-testing">Soil Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="#">
+                      <Link to="/food-testing">
                        Food Testing 
                       </Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="#">Herbal Testing</Link>
+                      <Link to="/herbal-testing">Herbal Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="#">Enviornmental Testing</Link>
+                      <Link to="/Enviornment-testing">Enviornmental Testing</Link>
                     </li>
                   </ul>
                 </div>

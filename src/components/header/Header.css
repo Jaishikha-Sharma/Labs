@@ -215,6 +215,7 @@ section {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .nav-link {
@@ -245,7 +246,7 @@ section {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 10rem;
+  width: 14rem;
   transform: translateY(10px);
   opacity: 0;
   pointer-events: none;

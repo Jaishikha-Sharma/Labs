@@ -1,0 +1,62 @@
+/* Scoped styles for WaterTesting component */
+.water-testing {
+    padding: 20px;
+  }
+  
+  .water-testing .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .water-testing .col-lg-8 {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: justify;
+  }
+  
+  .water-testing .col-lg-4 {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+  }
+  
+  .water-testing h3 {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .water-testing p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 10px 0;
+    
+  }
+  
+  .water-testing ul {
+    padding-left: 20px;
+
+  }
+  
+  .water-testing ul li {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 8px;
+    list-style-type: disc;
+    text-align: justify;
+  }
+  
+  .water-testing img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  

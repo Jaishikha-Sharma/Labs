@@ -18,7 +18,6 @@ const About = () => {
           className="about-banner"
         />
       </div>
-
       {/* Centered Heading */}
       <div className="about-heading">
         <h3>Welcome To ECMA Testing Laboratories</h3>
