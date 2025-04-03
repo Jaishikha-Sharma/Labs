@@ -10,14 +10,6 @@ const About = () => {
 
   return (
     <>
-      {/* Banner Image */}
-      <div>
-        <img
-          src="https://i.imgur.com/8Ie7SqD.jpeg"
-          alt="Contact-us"
-          className="about-banner"
-        />
-      </div>
       {/* Centered Heading */}
       <div className="about-heading">
         <h3>Welcome To ECMA Testing Laboratories</h3>

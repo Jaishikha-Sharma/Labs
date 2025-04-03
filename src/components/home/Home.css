@@ -1,6 +1,6 @@
 .marquee-container {
   width: 100%;
-  background-color: #a16b24;
+  background-color: #a26b28;
   color: white;
   padding: 2px 0;
   font-size: 13px;
@@ -94,7 +94,7 @@
 .features-section {
   display: flex;
   justify-content: space-around;
-  background-color: #d3a070;
+  background-color: #a97335;
   padding: 20px;
   color: white;
   text-align: center;

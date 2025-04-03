@@ -39,14 +39,7 @@ const blogs = [
 const Blogs = () => {
   return (
     <div>
-      <div>
-        <img
-          src="https://i.imgur.com/8Ie7SqD.jpeg"
-          alt="Contact-us"
-          className="about-banner"
-        />
-      </div>
-      <h3 className="blog-heading">Latest Blogs</h3>
+      <h3 style={{marginTop:"30px"}} className="blog-heading">Latest Blogs</h3>
       <div className="blogs-container">
         {blogs.map((blog) => (
           <div key={blog.id} className="blog-card">

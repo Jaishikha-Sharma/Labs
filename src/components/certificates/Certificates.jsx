@@ -4,7 +4,7 @@ import './Certificate.css';
 const Certificates = () => {
   return (
     <div className="certificate-container">
-      <h2>Certificates</h2>
+      <h2 className="blog-heading">Certificates</h2>
       <div className="pdf-viewer">
         <iframe 
           src="/Avinya minerals.pdf" 

@@ -49,7 +49,7 @@ const Header = () => {
                 </div>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/gallery">Galllery</Link>
+                <Link to="/gallery">Gallery</Link>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
                 <Link to="/certificates">Certificates</Link>

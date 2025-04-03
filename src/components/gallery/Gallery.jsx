@@ -28,15 +28,8 @@ const Gallery = () => {
 
   return (
   <>
-    <div>
-        <img
-          src="https://i.imgur.com/8Ie7SqD.jpeg"
-          alt="Contact-us"
-          className="about-banner"
-        />
-      </div>
     <div className="gallery-container">
-      <h2>Image Gallery</h2>
+      <h2 style={{marginTop:"30px"}} className="blog-heading">Image Gallery</h2>
       <div className="gallery-grid">
         {images.map((src, index) => (
           <div key={index} className="gallery-item">
