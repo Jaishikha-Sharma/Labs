@@ -62,10 +62,14 @@
 }
 
 .social-icon {
-  color: #FFFFFF;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  color: #333;
   font-size: 18px;
-}
-
-.social-icon:hover {
-  color: #A26B28;
+  transition: 0.3s ease;
 }
