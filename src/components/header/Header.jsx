@@ -6,58 +6,59 @@ import AuthModal from "../login/AuthModal.jsx";
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const closeMenu = () => {
+    document.getElementById("check").checked = false;
+  };
+
   return (
     <header>
       <div className="container">
         <input type="checkbox" name="check" id="check" />
         <div className="logo-container">
-          <img src="https://i.imgur.com/njJQdAg.png"alt="logo" style={{width:"68px"}}/>
+          <img src="https://i.imgur.com/njJQdAg.png" alt="logo" style={{ width: "68px" }} />
         </div>
         <div className="nav-btn">
           <div className="nav-links">
             <ul>
               <li className="nav-link" style={{ "--i": ".6s" }}>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={closeMenu}>Home</Link>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/about">About</Link>
+                <Link to="/about" onClick={closeMenu}>About</Link>
               </li>
               <li className="nav-link" style={{ "--i": ".85s" }}>
-                <Link to="/services">
+                <Link to="/services" onClick={closeMenu}>
                   Services <i className="fas fa-caret-down"></i>
                 </Link>
                 <div className="dropdown">
                   <ul>
                     <li className="dropdown-link">
-                      <Link to="/water-Testing">Water Testing</Link>
+                      <Link to="/water-Testing" onClick={closeMenu}>Water Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/soil-testing">Soil Testing</Link>
+                      <Link to="/soil-testing" onClick={closeMenu}>Soil Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/food-testing">
-                       Food Testing 
-                      </Link>
+                      <Link to="/food-testing" onClick={closeMenu}>Food Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/herbal-testing">Herbal Testing</Link>
+                      <Link to="/herbal-testing" onClick={closeMenu}>Herbal Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/Enviornment-testing">Enviornmental Testing</Link>
+                      <Link to="/Enviornment-testing" onClick={closeMenu}>Enviornmental Testing</Link>
                     </li>
                   </ul>
                 </div>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/gallery">Gallery</Link>
+                <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/certificates">Certificates</Link>
+                <Link to="/certificates" onClick={closeMenu}>Certificates</Link>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/blogs">Blogs</Link>
+                <Link to="/blogs" onClick={closeMenu}>Blogs</Link>
               </li>
-             
             </ul>
           </div>
         </div>
@@ -72,7 +73,7 @@ const Header = () => {
           <div className="hamburger-menu">
             <div></div>
           </div>
-        </div>{" "}
+        </div>
       </div>
       {isModalOpen && <AuthModal onClose={() => setIsModalOpen(false)} />}
     </header>
