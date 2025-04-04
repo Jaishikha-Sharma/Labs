@@ -7,6 +7,7 @@ const AuthModal = ({ onClose, onAuth = () => {} }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     password: "",
     confirmPassword: "",
   });
@@ -30,7 +31,12 @@ const AuthModal = ({ onClose, onAuth = () => {} }) => {
 
       const payload = isLogin
         ? { email: formData.email, password: formData.password }
-        : { name: formData.name, email: formData.email, password: formData.password };
+        : {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone, 
+            password: formData.password,
+          };
 
       const response = await axios.post(url, payload);
 
@@ -54,14 +60,24 @@ const AuthModal = ({ onClose, onAuth = () => {} }) => {
         <h2>{isLogin ? "Login" : "Sign Up"}</h2>
         <form onSubmit={handleSubmit}>
           {!isLogin && (
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+            <>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+            </>
           )}
           <input
             type="email"
