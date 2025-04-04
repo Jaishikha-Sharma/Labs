@@ -17,6 +17,7 @@ import HerbalTesting from "./components/services/testings/OilTesting";
 import EnvTesting from "./components/services/testings/EnviornmentTest";
 import ScrollToTop from "./components/Scroller/Scrollbar";
 import Blogs from "./components/blogs/Blogs";
+import Dashboard from "./components/dashboard/Dashboard";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/herbal-testing" element={<HerbalTesting />} />
         <Route path="/Enviornment-testing" element={<EnvTesting />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <ScrollToTop/>
       <Footer/>

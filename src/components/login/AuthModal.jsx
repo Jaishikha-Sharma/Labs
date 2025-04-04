@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./AuthModal.css";
 
-const AuthModal = ({ onClose, onAuth }) => {
+const AuthModal = ({ onClose, onAuth = () => {} }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
@@ -11,10 +12,10 @@ const AuthModal = ({ onClose, onAuth }) => {
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!isLogin && formData.password !== formData.confirmPassword) {
@@ -22,16 +23,35 @@ const AuthModal = ({ onClose, onAuth }) => {
       return;
     }
 
-    // 🔹 Handle Authentication (Firebase, API, etc.)
-    console.log("Authenticating:", formData);
-    onAuth(formData); // Call parent function
+    try {
+      const url = isLogin
+        ? "http://localhost:500/api/auth/login"
+        : "http://localhost:500/api/auth/register";
+
+      const payload = isLogin
+        ? { email: formData.email, password: formData.password }
+        : { name: formData.name, email: formData.email, password: formData.password };
+
+      const response = await axios.post(url, payload);
+
+      if (response.data.token) {
+        localStorage.setItem("token", response.data.token); // Save token
+        onAuth({ token: response.data.token }); // Notify parent
+        alert(isLogin ? "Login successful!" : "Signup successful!");
+        onClose(); // Close modal
+      } else {
+        alert("Authentication failed. No token received.");
+      }
+    } catch (error) {
+      console.error("Auth Error:", error);
+      alert(error.response?.data?.error || "Something went wrong. Try again.");
+    }
   };
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
         <h2>{isLogin ? "Login" : "Sign Up"}</h2>
-
         <form onSubmit={handleSubmit}>
           {!isLogin && (
             <input
@@ -76,15 +96,14 @@ const AuthModal = ({ onClose, onAuth }) => {
 
         <p>
           {isLogin ? "Don't have an account?" : "Already have an account?"}
-          <span
-            className="toggle-auth"
-            onClick={() => setIsLogin(!isLogin)}
-          >
+          <span className="toggle-auth" onClick={() => setIsLogin(!isLogin)}>
             {isLogin ? " Sign Up" : " Login"}
           </span>
         </p>
 
-        <button className="close-btn" onClick={onClose}>✖</button>
+        <button className="close-btn" onClick={onClose}>
+          ✖
+        </button>
       </div>
     </div>
   );
