@@ -1,0 +1,69 @@
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .chat-icon {
+    background: #25d366;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chat-icon img {
+    width: 30px;
+  }
+  
+  .chat-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .chat-box {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    background: white;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .chat-box p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .chat-button {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .chat-button:hover {
+    background: #1ebc5c;
+  }
+  

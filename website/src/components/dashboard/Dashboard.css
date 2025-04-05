@@ -1,0 +1,120 @@
+.dashboard-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-section,
+.test-history {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+  width: 30%;
+}
+
+.test-history {
+  width: 67%;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.profile-card input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #ceb172;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.test-history select {
+  margin: 10px 5px;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #ceb172;
+  color: white;
+}
+
+table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive styles for small screens */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .profile-section,
+  .test-history {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .profile-card input,
+  .profile-card button {
+    font-size: 16px;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,139 @@
+.marquee-container {
+  width: 100%;
+  background-color: #a26b28;
+  color: white;
+  padding: 2px 0;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee-text {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+.lab-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.lab-content {
+  display: flex;
+  max-width: 1000px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.lab-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 0 0 12px;
+}
+
+.lab-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lab-badge {
+  background: #091b4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.lab-text h2 {
+  font-size: 22px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.lab-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.lab-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lab-text li {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.contact-button {
+  background: #091b4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.contact-button:hover {
+  background: #0d255f;
+}
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #a97335;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.feature {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.feature:last-child {
+  border-right: none;
+}
+
+.feature i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+@media (max-width: 480px) {
+  .features-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8B5E3B;
+    padding: 10px;
+    color: white;
+    text-align: center;
+  }
+  
+  .feature {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+  }
+}
