@@ -5,7 +5,7 @@ import {register} from "../controller/AuthController.js"
 const testRouter = express.Router();
 
 // Get tests for a logged-in user
-testRouter.get("/", authMiddleware, async (req, res) => {
+testRouter.get("/getTest", authMiddleware, async (req, res) => {
   const tests = await Test.find({ userId: req.user.userId });
   res.json(tests);
 });
@@ -20,7 +20,7 @@ testRouter.post("/assign", authMiddleware, adminMiddleware, async (req, res) => 
     res.status(201).json({ message: "Test assigned successfully" });
   } catch (err) {
     res.status(500).json({ error: "Failed to assign test", message: err.message });
-  }
+  } 
 });
 
 export default testRouter;
