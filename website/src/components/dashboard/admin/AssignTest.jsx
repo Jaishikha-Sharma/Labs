@@ -121,14 +121,6 @@ const AssignTest = ({ token }) => {
           }
           required
         />
-
-        <label>Upload Test PDF</label>
-        <input
-          type="file"
-          accept="application/pdf"
-          onChange={(e) => setPdfFile(e.target.files[0])}
-        />
-
         <button type="submit">Assign Test</button>
       </form>
     </div>
