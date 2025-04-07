@@ -17,7 +17,7 @@ const Dashboard = () => {
     const token = localStorage.getItem("token");
     if (token) {
       axios
-        .get("http://localhost:5000/api/profile", {
+        .get("https://auth-backend-ombp.onrender.com/api/profile", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
@@ -32,7 +32,7 @@ const Dashboard = () => {
         .catch((err) => console.error("Error fetching profile:", err));
 
       axios
-        .get("http://localhost:5000/api/test/getTest", {
+        .get("https://auth-backend-ombp.onrender.com/api/test/getTest", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
@@ -55,7 +55,7 @@ const Dashboard = () => {
     }
 
     axios
-      .put("http://localhost:5000/api/profile", updatedData, {
+      .put("https://auth-backend-ombp.onrender.com/api/profile", updatedData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",

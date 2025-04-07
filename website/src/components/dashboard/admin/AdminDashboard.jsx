@@ -9,7 +9,7 @@ const AdminDashboard = ({ token }) => {
   useEffect(() => {
     if (token) {
       axios
-        .post("http://localhost:5000/api/get-user-list", {}, {
+        .post("https://auth-backend-ombp.onrender.com/api/get-user-list", {}, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {

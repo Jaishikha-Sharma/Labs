@@ -20,7 +20,7 @@ const AssignTest = ({ token }) => {
     data.append("file", pdfFile);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/upload", data, {
+      const res = await axios.post("https://auth-backend-ombp.onrender.com/api/upload", data, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
@@ -45,7 +45,7 @@ const AssignTest = ({ token }) => {
       };
 
       const res = await axios.post(
-        "http://localhost:5000/api/test/assign",
+        "https://auth-backend-ombp.onrender.com/api/test/assign",
         payload,
         {
           headers: {
