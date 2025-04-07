@@ -32,7 +32,7 @@ const Dashboard = () => {
         .catch((err) => console.error("Error fetching profile:", err));
 
       axios
-        .get("http://localhost:5000/api/test", {
+        .get("http://localhost:5000/api/test/getTest", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
