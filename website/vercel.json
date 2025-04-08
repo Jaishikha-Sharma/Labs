@@ -1,0 +1,15 @@
+{
+    "projects": [
+      {
+        "src": "website/",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist"
+        }
+      }
+    ],
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "rootDirectory": "website"
+  }
+  
