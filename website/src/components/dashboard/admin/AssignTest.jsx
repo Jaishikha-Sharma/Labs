@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./AssignTest.css";
 
+// Dynamically use local or production backend
+const BASE_URL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:5000"
+    : "https://auth-backend-ombp.onrender.com";
+
 const AssignTest = ({ token }) => {
   const [formData, setFormData] = useState({
     userName: "",
@@ -20,7 +26,7 @@ const AssignTest = ({ token }) => {
     data.append("file", pdfFile);
 
     try {
-      const res = await axios.post("https://auth-backend-ombp.onrender.com/api/upload", data, {
+      const res = await axios.post(`${BASE_URL}/api/test/upload`, data, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
@@ -44,20 +50,16 @@ const AssignTest = ({ token }) => {
         pdfUrl: uploadedPdfUrl,
       };
 
-      const res = await axios.post(
-        "https://auth-backend-ombp.onrender.com/api/test/assign",
-        payload,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const res = await axios.post(`${BASE_URL}/api/test/assign`, payload, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
-      if (res.data.success) {
+      if (res.status === 201) {
         alert("✅ Test assigned successfully!");
 
-        // Clear fields after success
+        // Clear form after success
         setFormData({
           userName: "",
           testName: "",
@@ -78,7 +80,6 @@ const AssignTest = ({ token }) => {
 
   return (
     <div className="assign-test-container">
-      <h3>Assign Test to User</h3>
       <form className="assign-form" onSubmit={handleAssign}>
         <label>User Name</label>
         <input
@@ -121,6 +122,15 @@ const AssignTest = ({ token }) => {
           }
           required
         />
+
+        <label>Upload PDF Report</label>
+        <input
+          type="file"
+          accept="application/pdf"
+          onChange={(e) => setPdfFile(e.target.files[0])}
+          required
+        />
+
         <button type="submit">Assign Test</button>
       </form>
     </div>

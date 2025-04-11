@@ -45,9 +45,14 @@ const AuthModal = ({ onClose, onAuth = () => {} }) => {
     }
 
     try {
+      const BASE_URL =
+        window.location.hostname === "localhost"
+          ? "http://localhost:5000"
+          : "https://auth-backend-ombp.onrender.com";
+
       const url = isLogin
-        ? "https://auth-backend-ombp.onrender.com/api/auth/login"
-        : "https://auth-backend-ombp.onrender.com/api/auth/register";
+        ? `${BASE_URL}/api/auth/login`
+        : `${BASE_URL}/api/auth/register`;
 
       const payload = isLogin
         ? { email: formData.email, password: formData.password }

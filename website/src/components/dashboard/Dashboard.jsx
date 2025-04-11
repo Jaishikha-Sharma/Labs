@@ -13,11 +13,16 @@ const Dashboard = () => {
   });
   const [tests, setTests] = useState([]);
 
+  const BASE_URL =
+    window.location.hostname === "localhost"
+      ? "http://localhost:5000"
+      : "https://auth-backend-ombp.onrender.com";
+
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
       axios
-        .get("https://auth-backend-ombp.onrender.com/api/profile", {
+        .get(`${BASE_URL}/api/profile`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
@@ -32,7 +37,7 @@ const Dashboard = () => {
         .catch((err) => console.error("Error fetching profile:", err));
 
       axios
-        .get("https://auth-backend-ombp.onrender.com/api/test/getTest", {
+        .get(`${BASE_URL}/api/test/getTest`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
@@ -55,7 +60,7 @@ const Dashboard = () => {
     }
 
     axios
-      .put("https://auth-backend-ombp.onrender.com/api/profile", updatedData, {
+      .put(`${BASE_URL}/api/profile`, updatedData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
@@ -77,13 +82,13 @@ const Dashboard = () => {
       ) : (
         <>
           <div className="profile-section">
-            <h2>ECMA LAB</h2>
+            <h2 style={{textAlign:"center"}}>ECMA LAB</h2>
             <div className="profile-card">
               <img
                 src={
-                  typeof user.avatar === "string"
+                  typeof user.avatar === "string" && user.avatar !== ""
                     ? user.avatar
-                    : "default-avatar.png"
+                    : "https://cdn-icons-png.flaticon.com/512/149/149071.png"
                 }
                 alt="Avatar"
                 className="avatar"
@@ -113,12 +118,12 @@ const Dashboard = () => {
                   setFormData({ ...formData, phone: e.target.value })
                 }
               />
-              <input
+              {/* <input
                 type="file"
                 onChange={(e) =>
                   setFormData({ ...formData, avatar: e.target.files[0] })
                 }
-              />
+              /> */}
               <button onClick={handleUpdate}>Save</button>
             </div>
           </div>

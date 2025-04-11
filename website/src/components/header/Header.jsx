@@ -57,6 +57,17 @@ const Header = () => {
                   Home
                 </Link>
               </li>
+              {isLoggedIn && (
+                <li className="nav-link" style={{ "--i": "1.35s" }}>
+                  <Link
+                    style={{ color: "white" }}
+                    to="/dashboard"
+                    onClick={closeMenu}
+                  >
+                    Dashboard
+                  </Link>
+                </li>
+              )}
               <li className="nav-link" style={{ "--i": "1.35s" }}>
                 <Link to="/about" onClick={closeMenu}>
                   About
@@ -96,17 +107,6 @@ const Header = () => {
                   </ul>
                 </div>
               </li>
-              {isLoggedIn && (
-                <li className="nav-link" style={{ "--i": "1.35s" }}>
-                  <Link
-                    style={{ color: "white" }}
-                    to="/dashboard"
-                    onClick={closeMenu}
-                  >
-                    Dashboard
-                  </Link>
-                </li>
-              )}
               <li className="nav-link" style={{ "--i": "1.35s" }}>
                 <Link to="/gallery" onClick={closeMenu}>
                   Gallery

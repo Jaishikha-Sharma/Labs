@@ -127,6 +127,7 @@ section {
   color: #333;
   transition: width 0.3s ease;
   width: 200px;
+  display: none;
 }
 
 .search-btn {
@@ -568,7 +569,8 @@ section {
     width: 100%;
     text-align: center;
     padding: 10px;
-  }
+    margin-left: 61px;
+}
 }
 html, body {
   overflow: auto !important;
