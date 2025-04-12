@@ -131,8 +131,6 @@ const Header = () => {
             className="search-input"
             placeholder="Type to start search"
           />
-          <button className="search-btn">Search</button>
-
           {isLoggedIn ? (
             <div className="profile-info">
               <button className="logout-btn" onClick={handleLogout}>

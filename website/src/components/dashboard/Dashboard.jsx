@@ -130,15 +130,6 @@ const Dashboard = () => {
 
           <div className="test-history">
             <h3>Test History</h3>
-            <div className="filters">
-              <select>
-                <option>Month</option>
-                <option>April</option>
-              </select>
-              <select>
-                <option>2024</option>
-              </select>
-            </div>
             <table>
               <thead>
                 <tr>

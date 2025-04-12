@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./AssignTest.css";
 
-// Dynamically use local or production backend
 const BASE_URL =
   process.env.NODE_ENV === "development"
     ? "http://localhost:5000"
@@ -10,7 +9,7 @@ const BASE_URL =
 
 const AssignTest = ({ token }) => {
   const [formData, setFormData] = useState({
-    userName: "",
+    userId: "",
     testName: "",
     date: "",
     price: "",
@@ -18,6 +17,29 @@ const AssignTest = ({ token }) => {
   });
 
   const [pdfFile, setPdfFile] = useState(null);
+  const [users, setUsers] = useState([]);
+
+  // ✅ Fetch user list
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const res = await axios.post(
+          `${BASE_URL}/api/get-user-list`,
+          { page: 1, limit: 100 },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        setUsers(res.data.userList || []);
+      } catch (err) {
+        console.error("Error fetching users:", err.message);
+      }
+    };
+
+    fetchUsers();
+  }, [token]);
 
   const handlePdfUpload = async () => {
     if (!pdfFile) return "";
@@ -58,10 +80,8 @@ const AssignTest = ({ token }) => {
 
       if (res.status === 201) {
         alert("✅ Test assigned successfully!");
-
-        // Clear form after success
         setFormData({
-          userName: "",
+          userId: "",
           testName: "",
           date: "",
           price: "",
@@ -81,16 +101,21 @@ const AssignTest = ({ token }) => {
   return (
     <div className="assign-test-container">
       <form className="assign-form" onSubmit={handleAssign}>
-        <label>User Name</label>
-        <input
-          type="text"
-          placeholder="Enter user name"
-          value={formData.userName}
-          onChange={(e) =>
-            setFormData({ ...formData, userName: e.target.value })
-          }
+        <label>Select User</label>
+        <select
           required
-        />
+          value={formData.userId}
+          onChange={(e) =>
+            setFormData({ ...formData, userId: e.target.value })
+          }
+        >
+          <option value="">Select a User</option>
+          {users.map((user) => (
+            <option key={user._id} value={user._id}>
+              {user.name} ({user.email})
+            </option>
+          ))}
+        </select>
 
         <label>Test Name</label>
         <input

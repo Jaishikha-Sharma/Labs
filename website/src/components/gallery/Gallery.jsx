@@ -25,19 +25,22 @@ const images = [
 ];
 
 const Gallery = () => {
-
   return (
-  <>
-    <div className="gallery-container">
-      <h2 style={{marginTop:"30px"}} className="blog-heading">Image Gallery</h2>
-      <div className="gallery-grid">
-        {images.map((src, index) => (
-          <div key={index} className="gallery-item">
-            <img src={src} alt={`Gallery ${index + 1}`} />
-          </div>
-        ))}
+    <>
+      <div className="gallery-container">
+        <h2 style={{ marginTop: "30px" }} className="blog-heading">Image Gallery</h2>
+        <div className="gallery-grid">
+          {images.map((src, index) => (
+            <div key={index} className="gallery-item">
+              <img
+                src={src}
+                alt={`Gallery ${index + 1}`}
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 };
