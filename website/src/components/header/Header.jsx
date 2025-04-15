@@ -30,24 +30,25 @@ const Header = () => {
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
     const storedName = localStorage.getItem("name");
-  
+
     if (storedToken) {
       setIsLoggedIn(true);
       setName(storedName || "User");
     }
   }, []);
-  
 
   return (
     <header>
       <div className="container">
         <input type="checkbox" name="check" id="check" />
         <div className="logo-container">
-          <img
-            src="https://i.imgur.com/njJQdAg.png"
-            alt="logo"
-            style={{ width: "68px" }}
-          />
+          <Link to="/" onClick={closeMenu}>
+            <img
+              src="https://i.imgur.com/njJQdAg.png"
+              alt="logo"
+              style={{ width: "68px" }}
+            />
+          </Link>
         </div>
         <div className="nav-btn">
           <div className="nav-links">

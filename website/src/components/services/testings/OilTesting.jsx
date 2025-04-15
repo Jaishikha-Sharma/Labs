@@ -4,7 +4,7 @@ import "./Testing.css";
 const HerbalTesting = () => {
   return (
     <div className="water-testing">
-      <h3>Herbal Testing</h3>
+      <h3 style={{marginTop:"30px" , marginBottom:"30px"}}>Herbal Testing</h3>
       <div className="row">
         <div className="col-lg-8">
           <p>

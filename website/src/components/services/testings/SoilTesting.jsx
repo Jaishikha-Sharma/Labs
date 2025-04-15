@@ -4,7 +4,7 @@ import "./Testing.css";
 const SoilTesting = () => {
   return (
     <div className="water-testing">
-      <h3>Soil Testing</h3>
+      <h3 style={{marginTop:"30px" , marginBottom:"30px"}}>Soil Testing</h3>
       <div className="row">
         <div className="col-lg-8">
           <p>
