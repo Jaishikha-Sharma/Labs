@@ -1,7 +1,9 @@
-import React from "react";
+import React , {useState} from "react";
 import "./Testing.css";
+import TestForm from "./TestingFom";
 
 const HerbalTesting = () => {
+    const [showForm, setShowForm] = useState(false);
   return (
     <div className="water-testing">
       <h3 style={{marginTop:"30px" , marginBottom:"30px"}}>Herbal Testing</h3>
@@ -27,6 +29,10 @@ const HerbalTesting = () => {
           <img src="https://i.imgur.com/LulBG5x.jpeg" alt="testing" />
         </div>
       </div>
+      <button className="open-form-btn" onClick={() => setShowForm(!showForm)}>
+        {showForm ? "Hide Form" : "Test Now"}
+      </button>
+      {showForm && <TestForm serviceName="Herbal Testing" />}
     </div>
   );
 };

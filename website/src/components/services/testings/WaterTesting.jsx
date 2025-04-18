@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Testing.css";
+import TestForm from "./TestingFom";
 
 const WaterTesting = () => {
   const [showForm, setShowForm] = useState(false);
@@ -31,66 +32,10 @@ const WaterTesting = () => {
           <img src="https://i.imgur.com/4Ixnddk.jpeg" alt="water testing" />
         </div>
       </div>
-
       <button className="open-form-btn" onClick={() => setShowForm(!showForm)}>
         {showForm ? "Hide Form" : "Test Now"}
       </button>
-
-      {showForm && (
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          className="inline-test-form"
-        >
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-
-          <div className="form-row">
-            <label>Name</label>
-            <input type="text" name="name" required />
-          </div>
-
-          <div className="form-row">
-            <label>Email</label>
-            <input type="email" name="email" required />
-          </div>
-
-          <div className="form-row">
-            <label>Address</label>
-            <input type="text" name="address" required />
-          </div>
-
-          <div className="form-row">
-            <label>Country</label>
-            <input type="text" name="country" required />
-          </div>
-
-          <div className="form-row">
-            <label>Testing Type</label>
-            <select name="testing" required>
-              <option value="">-- Select Testing --</option>
-              <option value="Water">Water</option>
-              <option value="Soil">Soil</option>
-              <option value="Herbal">Herbal</option>
-              <option value="Environment">Environment</option>
-              <option value="Food">Food</option>
-            </select>
-          </div>
-
-          <div className="form-row">
-            <label>Sample Type</label>
-            <select name="sample_type" required>
-              <option value="">-- Select Sample Type --</option>
-              <option value="Raw">Raw</option>
-              <option value="Processed">Processed</option>
-              <option value="Packaged">Packaged</option>
-            </select>
-          </div>
-
-          <button type="submit" className="submit-btn">
-            Submit Test
-          </button>
-        </form>
-      )}
+      {showForm && <TestForm serviceName="Water Testing" />}
     </div>
   );
 };
