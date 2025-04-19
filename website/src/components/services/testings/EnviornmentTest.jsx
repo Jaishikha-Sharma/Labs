@@ -1,31 +1,33 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import "./Testing.css";
 import TestForm from "./TestingFom";
 
 const EnvTesting = () => {
-    const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   return (
     <div className="water-testing">
-      <h3 style={{marginTop:"30px" , marginBottom:"30px"}}>Enviornment Testing</h3>
+      <h3 style={{ marginTop: "30px", marginBottom: "30px" }}>
+      Pollution & Enviornment Testing
+      </h3>
       <div className="row">
         <div className="col-lg-8">
           <p>
-            <strong>ECMA LABS </strong>provides environmental monitoring
-            instruments and well qualified personnel to carry out environmental
-            baseline and compliance monitoring in all walk of sectors like
-            petrochemical, mining, cement, highways, housing and infrastructure
-            for EIA studies. We offer extensive capabilities to perform a
-            complete range of Environmental tests.
+            <strong>ECMA LAB</strong> offers Environmental Testing Services from
+            our well-equipped laboratory, helping you to minimize environmental
+            impact and enhance environmental protection. Environmental Testing
+            includes Air quality consulting, Environmental monitoring,
+            Ventilation Surveys, Noise level measurement, Emission Monitoring,
+            and ETP/STP operation and maintenance.<br/> <b>Contact us</b> now for more
+            information. Parameters measured in Air Quality monitoring are SO2 (Sulphur Dioxide), NOx (Oxides of Nitrogen), Particulate Matter (PM 10 and PM2. 5), Ozone, Lead, CO (Carbon Monoxide) etc.
           </p>
           <p>
             <strong>Key Services:</strong>
           </p>
           <ul>
-            <li>Air testing</li>
-            <li>soil testing</li>
-            <li>Water testing</li>
-            <li>VOCs and Hydrocarbons.</li>
-            <li>Indoor & outdoor gas quality.</li>
+            <li>Testing of stack emissions</li>
+            <li>Noise & Vibration Monitoring</li>
+            <li>Air sampling & Monitoring</li>
+            <li>Air – Ambient, Indoor Air quality monitoring or Testing</li>
           </ul>
         </div>
         <div className="col-lg-4">

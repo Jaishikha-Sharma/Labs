@@ -96,13 +96,23 @@ const Header = () => {
                       </Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/herbal-testing" onClick={closeMenu}>
-                        Herbal Testing
+                      <Link to="/metals" onClick={closeMenu}>
+                        Metal & Alloy Testing
                       </Link>
                     </li>
                     <li className="dropdown-link">
                       <Link to="/Enviornment-testing" onClick={closeMenu}>
                         Enviornmental Testing
+                      </Link>
+                    </li>
+                    <li className="dropdown-link">
+                      <Link to="/coke-testing" onClick={closeMenu}>
+                        Coal & Coke Testing
+                      </Link>
+                    </li>
+                    <li className="dropdown-link">
+                      <Link to="/building-analysis" onClick={closeMenu}>
+                      Building-analysis
                       </Link>
                     </li>
                   </ul>

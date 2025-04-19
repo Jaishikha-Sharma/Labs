@@ -42,14 +42,20 @@ const Footer = () => {
               <Link to="/soil-Testing" style={{ color: "white" }}>
                 <li>Soil Testing</li>
               </Link>
-              <Link to="/Enviornment-testing" style={{ color: "white" }}>
-                <li>Environment Testing</li>
-              </Link>
               <Link to="/food-testing" style={{ color: "white" }}>
                 <li>Food Testing</li>
               </Link>
-              <Link to="/herbal-testing" style={{ color: "white" }}>
-                <li>Herbal Testing</li>
+              <Link to="/Enviornment-testing" style={{ color: "white" }}>
+                <li>Environment Testing</li>
+              </Link>
+              <Link to="/metals" style={{ color: "white" }}>
+                <li>Metal & Alloys Testing</li>
+              </Link>
+              <Link to="/coke-testing" style={{ color: "white" }}>
+                <li>Coal & Coke Testing</li>
+              </Link>
+              <Link to="/building-analysis" style={{ color: "white" }}>
+                <li>Building & Construction Material Analysis</li>
               </Link>
             </ul>
           </Col>

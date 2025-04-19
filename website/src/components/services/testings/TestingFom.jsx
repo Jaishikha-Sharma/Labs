@@ -176,7 +176,6 @@ const TestForm = ({ serviceName }) => {
               <option value="">-- Select Testing --</option>
               <option value="Water">Water</option>
               <option value="Soil">Soil</option>
-              <option value="Herbal">Herbal</option>
               <option value="Environment">Environment</option>
               <option value="Food">Food</option>
             </select>

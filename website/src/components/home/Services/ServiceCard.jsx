@@ -30,16 +30,6 @@ const Services = () => {
           <button className="discover-btn">Discover More →</button></Link>
         </div>
         <div className="service-card">
-          <img src="https://i.imgur.com/LulBG5x.jpeg" alt="img" />
-          <h3>Herbal Testing</h3>
-          <p>
-            ECMA Laboratory conducts comprehensive Herbal testing, analyzing
-            nutrient content and Herbal quality.
-          </p>
-          <Link to="/herbal-Testing" style={{ color: "white" }}>
-          <button className="discover-btn">Discover More →</button></Link>
-        </div>
-        <div className="service-card">
           <img src="https://i.imgur.com/OZZmdxk.jpeg" alt="img" />
           <h3>Environment Testing</h3>
           <p>
@@ -47,6 +37,15 @@ const Services = () => {
             analyzing soil and water.
           </p>
           <Link to="/Enviornment-Testing" style={{ color: "white" }}>
+          <button className="discover-btn">Discover More →</button></Link>
+        </div>
+        <div className="service-card">
+          <img src="https://i.imgur.com/mN7O1jH.png" alt="img" />
+          <h3>Metals & Alloys Testing</h3>
+          <p>
+            ECMA Laboratory specializes in comprehensive Metals & Alloys testing.
+          </p>
+          <Link to="/metals" style={{ color: "white" }}>
           <button className="discover-btn">Discover More →</button></Link>
         </div>
       </div>
