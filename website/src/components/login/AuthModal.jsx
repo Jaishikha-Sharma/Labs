@@ -4,6 +4,7 @@ import "./AuthModal.css";
 
 const AuthModal = ({ onClose, onAuth = () => {} }) => {
   const [isLogin, setIsLogin] = useState(true);
+  const [loading, setLoading] = useState(false); // Loader state
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,6 +19,7 @@ const AuthModal = ({ onClose, onAuth = () => {} }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     if (!isLogin) {
       const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
@@ -25,21 +27,25 @@ const AuthModal = ({ onClose, onAuth = () => {} }) => {
 
       if (!gmailRegex.test(formData.email)) {
         alert("Please enter a valid Gmail address (e.g., yourname@gmail.com).");
+        setLoading(false);
         return;
       }
 
       if (!phoneRegex.test(formData.phone)) {
         alert("Phone number must be exactly 10 digits.");
+        setLoading(false);
         return;
       }
 
       if (formData.password.length < 10) {
         alert("Password must be at least 10 characters long.");
+        setLoading(false);
         return;
       }
 
       if (formData.password !== formData.confirmPassword) {
         alert("Passwords do not match!");
+        setLoading(false);
         return;
       }
     }
@@ -76,6 +82,8 @@ const AuthModal = ({ onClose, onAuth = () => {} }) => {
     } catch (error) {
       console.error("Auth Error:", error);
       alert(error.response?.data?.error || "Something went wrong. Try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -130,8 +138,8 @@ const AuthModal = ({ onClose, onAuth = () => {} }) => {
               required
             />
           )}
-          <button type="submit" className="auth-btn">
-            {isLogin ? "Login" : "Sign Up"}
+          <button type="submit" className="auth-btn" disabled={loading}>
+            {loading ? <div className="spinner"></div> : isLogin ? "Login" : "Sign Up"}
           </button>
         </form>
 
