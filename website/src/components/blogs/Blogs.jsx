@@ -46,7 +46,6 @@ const Blogs = () => {
             <img src={blog.img} alt={blog.title} className="blog-img" />
             <h4 className="blog-title">{blog.title}</h4>
             <p className="blog-description">{blog.description}</p>
-            <a className="read-more">Read More →</a>
           </div>
         ))}
       </div>

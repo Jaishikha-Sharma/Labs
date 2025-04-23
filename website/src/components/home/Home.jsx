@@ -3,6 +3,7 @@ import "./Home.css";
 import Services from "./Services/ServiceCard";
 import ChatWidget from "../chatBot/ChatBot";
 import TestimonialSection from "./testimonial/Testimonial";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -88,8 +89,8 @@ const Home = () => {
               <li>✅ Modify the theming of the prebuilt automation platform</li>
               <li>✅ Override the default strings for any element</li>
             </ul>
-            <button className="lab-badge">Get In Touch</button>
-          </div>
+            <Link to="/contact" className="lab-badge">Get In Touch</Link>
+            </div>
         </div>
       </div>
       <div className="features-section mt-5">
