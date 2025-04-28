@@ -106,11 +106,6 @@ const Header = () => {
                         Our Mission
                       </Link>
                     </li>
-                    <li className="dropdown-link">
-                      <Link to="/vision" onClick={closeMenu}>
-                        Our Vision
-                      </Link>
-                    </li>
                   </ul>
                 </div>
               </li>

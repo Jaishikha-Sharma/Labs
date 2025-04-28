@@ -22,7 +22,6 @@ const MetalsTesting = lazy(() => import("./components/services/testings/MetalsTe
 const CokeTesting = lazy(() => import("./components/services/testings/CokeTesting"));
 const BuildingAnalysis = lazy(() => import("./components/services/testings/BuildingAnalysis"));
 const Mission = lazy(() => import("./components/about/Mission"));
-const Vision = lazy(() => import("./components/about/Vision"));
 const WhatWeAre = lazy(() => import("./components/about/whatWeAre"));
 
 function App() {
@@ -49,7 +48,6 @@ function App() {
           <Route path="/building-analysis" element={<BuildingAnalysis />} />
           <Route path="/what-we-are" element={<WhatWeAre />} />
           <Route path="/mission" element={<Mission />} />
-          <Route path="/vision" element={<Vision />} />
         </Routes>
       </Suspense>
       <ScrollToTop />
