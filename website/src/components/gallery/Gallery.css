@@ -40,8 +40,8 @@ h2 {
   transform: scale(1.05);
 }
 
-/* Modal styles */
-.modal {
+/* modell styles */
+.modell {
   position: fixed;
   top: 0;
   left: 0;
@@ -54,20 +54,20 @@ h2 {
   z-index: 1000;
 }
 
-.modal-content {
+.modell-content {
   position: relative;
   max-width: 50%; 
   max-height: 100%;
 }
 
-.modal-image {
+.modell-image {
   width: 100%;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
 }
 
-.modal-image:hover {
+.modell-image:hover {
   transform: scale(1.1); /* Gentle zoom effect when hovering */
 }
 
@@ -82,4 +82,9 @@ h2 {
   border: none;
   cursor: pointer;
   z-index: 1100;
+}
+@media (max-width: 768px) {
+  .modell-content {
+    max-width: 80%;  
+  }
 }

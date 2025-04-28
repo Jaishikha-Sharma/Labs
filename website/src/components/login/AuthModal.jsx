@@ -150,7 +150,7 @@ const AuthModal = ({ onClose, onAuth = () => {} }) => {
           </span>
         </p>
 
-        <button className="close-btn" onClick={onClose}>
+        <button className="close" onClick={onClose}>
           ✖
         </button>
       </div>
