@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Gallery.css";
 
 const images = [
@@ -25,13 +25,26 @@ const images = [
 ];
 
 const Gallery = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
+
+  const openModal = (src) => {
+    setCurrentImage(src);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentImage(null);
+  };
+
   return (
     <>
       <div className="gallery-container">
         <h2 style={{ marginTop: "30px" }} className="blog-heading">Image Gallery</h2>
         <div className="gallery-grid">
           {images.map((src, index) => (
-            <div key={index} className="gallery-item">
+            <div key={index} className="gallery-item" onClick={() => openModal(src)}>
               <img
                 src={src}
                 alt={`Gallery ${index + 1}`}
@@ -41,6 +54,15 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close-btn" onClick={closeModal}>×</span>
+            <img src={currentImage} alt="Zoomed" className="modal-image" />
+          </div>
+        </div>
+      )}
     </>
   );
 };

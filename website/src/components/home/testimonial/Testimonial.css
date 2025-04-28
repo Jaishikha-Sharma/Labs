@@ -69,4 +69,11 @@
       align-items: center;
     }
   }
+  .slick-slide {
+    padding: 0 10px; /* yeh kam karega left-right gap */
+  }
+  
+  .slick-list {
+    margin: 0 -10px; /* yeh compensate karega outer margin */
+  }
   

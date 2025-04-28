@@ -5,7 +5,6 @@ import ChatWidget from "../chatBot/ChatBot";
 import TestimonialSection from "./testimonial/Testimonial";
 import { Link } from "react-router-dom";
 
-
 const Home = () => {
   return (
     <div className="home">
@@ -16,31 +15,48 @@ const Home = () => {
           - Your Trusted Partner in Quality Assurance
         </marquee>
       </div>
-      <div id="carouselExample" className="carousel slide">
+      <div
+        id="carouselExample"
+        className="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="8000"
+      >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img
-              src="https://i.imgur.com/C58NY3c.png"
-              className="d-block w-100"
-              alt="..."
-            />
+            <img src="/main.avif" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img
-              src="https://i.imgur.com/C58NY3c.png"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://i.imgur.com/C58NY3c.png"
-              className="d-block w-100"
-              alt="..."
-            />
+            <img src="/lab4.avif" className="d-block w-100" alt="..." />
           </div>
         </div>
+
+        {/* Add carousel controls (buttons) */}
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
+
       {/* New Section Below Carousel */}
       <div className="features-section">
         <div className="feature">
@@ -89,8 +105,10 @@ const Home = () => {
               <li>✅ Modify the theming of the prebuilt automation platform</li>
               <li>✅ Override the default strings for any element</li>
             </ul>
-            <Link to="/contact" className="lab-badge">Get In Touch</Link>
-            </div>
+            <Link to="/contact" className="lab-badge">
+              Get In Touch
+            </Link>
+          </div>
         </div>
       </div>
       <div className="features-section mt-5">

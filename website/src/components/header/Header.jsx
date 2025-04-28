@@ -39,15 +39,35 @@ const Header = () => {
 
   return (
     <header>
+      <div className="top-contact-bar">
+        <div className="contact-info">
+          <span>
+            <i className="fas fa-phone"></i> +91 8949873474
+          </span>
+          <span>
+            <i className="fas fa-envelope"></i> ecmalab2021@gmail.com
+          </span>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
       <div className="container">
         <input type="checkbox" name="check" id="check" />
         <div className="logo-container">
           <Link to="/" onClick={closeMenu}>
-            <img
-              src="https://i.imgur.com/njJQdAg.png"
-              alt="logo"
-              style={{ width: "68px" }}
-            />
+            <img src="/logoHome.png" alt="logo" style={{ width: "70px" }} />
           </Link>
         </div>
         <div className="nav-btn">
@@ -69,10 +89,30 @@ const Header = () => {
                   </Link>
                 </li>
               )}
-              <li className="nav-link" style={{ "--i": "1.35s" }}>
+             <li className="nav-link" style={{ "--i": "1.35s" }}>
                 <Link to="/about" onClick={closeMenu}>
                   About
+                  <i className="fas fa-caret-down"></i>
                 </Link>
+                <div className="dropdown">
+                  <ul>
+                    <li className="dropdown-link">
+                      <Link to="/about/what-we-are" onClick={closeMenu}>
+                        What We Are
+                      </Link>
+                    </li>
+                    <li className="dropdown-link">
+                      <Link to="/about/mission" onClick={closeMenu}>
+                        Our Mission
+                      </Link>
+                    </li>
+                    <li className="dropdown-link">
+                      <Link to="/about/vision" onClick={closeMenu}>
+                        Our Vision
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li className="nav-link" style={{ "--i": ".85s" }}>
                 <Link to="/services" onClick={closeMenu}>
@@ -112,7 +152,7 @@ const Header = () => {
                     </li>
                     <li className="dropdown-link">
                       <Link to="/building-analysis" onClick={closeMenu}>
-                      Building-analysis
+                        Building-analysis
                       </Link>
                     </li>
                   </ul>
@@ -131,6 +171,11 @@ const Header = () => {
               <li className="nav-link" style={{ "--i": "1.35s" }}>
                 <Link to="/blogs" onClick={closeMenu}>
                   Blogs
+                </Link>
+              </li>
+              <li className="nav-link" style={{ "--i": "1.35s" }}>
+                <Link to="/contact" onClick={closeMenu}>
+                  Contact
                 </Link>
               </li>
             </ul>

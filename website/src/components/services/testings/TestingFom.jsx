@@ -174,19 +174,13 @@ const TestForm = ({ serviceName }) => {
             <label>Testing Type</label>
             <select name="testing" required>
               <option value="">-- Select Testing --</option>
-              <option value="Water">Water</option>
-              <option value="Soil">Soil</option>
-              <option value="Environment">Environment</option>
-              <option value="Food">Food</option>
-            </select>
-          </div>
-          <div className="form-row">
-            <label>Sample Type</label>
-            <select name="sample_type" required>
-              <option value="">-- Select Sample Type --</option>
-              <option value="Raw">Raw</option>
-              <option value="Processed">Processed</option>
-              <option value="Packaged">Packaged</option>
+              <option value="Water">Water Testing</option>
+              <option value="Soil">Soil Testing</option>
+              <option value="Environment">Environment Testing</option>
+              <option value="Food">Food Testing</option>
+              <option value="Food">Coal and Coke Testing</option>
+              <option value="Food">Metal and Alloy Testing</option>
+              <option value="Food">Building Analysis</option>
             </select>
           </div>
         </div>
@@ -196,7 +190,7 @@ const TestForm = ({ serviceName }) => {
           <textarea name="message" rows="4" placeholder="Your message" required />
         </div>
 
-        <button type="submit" className="submit-btn">Submit Test</button>
+        <button type="submit" className="submit-btn">Submit Query</button>
 
         {result && <p className="result-message">{result}</p>}
       </form>

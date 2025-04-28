@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 const Services = () => {
   return (
     <div className="services-section">
-      <h3 className="services-title">OUR SERVICES</h3>
+      <Link to='/services'>
+      <h3 className="services-title">OUR SERVICES</h3></Link>
       <h2 className="services-subtitle">We Provide Reliable Service</h2>
       <div className="services-container">
         <div className="service-card">
@@ -17,7 +18,7 @@ const Services = () => {
             analyzing for contaminants.
           </p>
             <Link to="/water-Testing" style={{ color: "white" }}>
-          <button className="discover-btn">Discover More →</button></Link>
+          <button className="discover-btn">Discover More</button></Link>
         </div>
         <div className="service-card">
           <img src="https://i.imgur.com/p4FU48L.jpeg" alt="img" />
@@ -27,7 +28,7 @@ const Services = () => {
             nutrient content and soil quality.
           </p>
           <Link to="/soil-Testing" style={{ color: "white" }}>
-          <button className="discover-btn">Discover More →</button></Link>
+          <button className="discover-btn">Discover More</button></Link>
         </div>
         <div className="service-card">
           <img src="https://i.imgur.com/OZZmdxk.jpeg" alt="img" />
@@ -37,7 +38,7 @@ const Services = () => {
             analyzing soil and water.
           </p>
           <Link to="/Enviornment-Testing" style={{ color: "white" }}>
-          <button className="discover-btn">Discover More →</button></Link>
+          <button className="discover-btn">Discover More</button></Link>
         </div>
         <div className="service-card">
           <img src="https://i.imgur.com/mN7O1jH.png" alt="img" />
@@ -46,7 +47,7 @@ const Services = () => {
             ECMA Laboratory specializes in comprehensive Metals & Alloys testing.
           </p>
           <Link to="/metals" style={{ color: "white" }}>
-          <button className="discover-btn">Discover More →</button></Link>
+          <button className="discover-btn">Discover More</button></Link>
         </div>
       </div>
     </div>

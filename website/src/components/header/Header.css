@@ -49,7 +49,7 @@ section {
 }
 
 .container {
-  max-width: 80rem;
+  max-width: 100rem;
   padding: 6px 2rem;
   margin: 0 auto;
   display: flex;
@@ -127,7 +127,6 @@ section {
   color: #333;
   transition: width 0.3s ease;
   width: 200px;
-  display: none;
 }
 
 .search-btn {
@@ -575,3 +574,58 @@ section {
 html, body {
   overflow: auto !important;
 }
+.top-contact-bar {
+  background-color: #573505; /* dark brownish background */
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+}
+
+.contact-info span,
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.contact-info i {
+  font-size: 16px;
+}
+
+/* Smooth hover effect for icons */
+.contact-info a:hover {
+  color: #ffcc00;
+  transition: color 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-info {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .contact-info span,
+  .contact-info a {
+    font-size: 12px;
+  }
+
+  .top-contact-bar {
+    padding: 10px;
+  }
+}
+

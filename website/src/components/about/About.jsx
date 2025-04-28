@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./About.css";
-
+import TestimonialSection from "../home/testimonial/Testimonial";
 const About = () => {
   const [openAccordion, setOpenAccordion] = useState(null);
 
@@ -59,7 +59,6 @@ const About = () => {
         </div>
       </div>
       <div className="mt-5">
-        <h3>What we do</h3>
         {/* Accordion Section */}
         <div className="accordion">
           {/* First Accordion */}
@@ -170,6 +169,9 @@ const About = () => {
             )}
           </div>
         </div>
+      </div>
+      <div className="mt-5">
+        <TestimonialSection />
       </div>
     </>
   );
