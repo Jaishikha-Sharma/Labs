@@ -97,17 +97,17 @@ const Header = () => {
                 <div className="dropdown">
                   <ul>
                     <li className="dropdown-link">
-                      <Link to="/about/what-we-are" onClick={closeMenu}>
+                      <Link to="/what-we-are" onClick={closeMenu}>
                         What We Are
                       </Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/about/mission" onClick={closeMenu}>
+                      <Link to="/mission" onClick={closeMenu}>
                         Our Mission
                       </Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/about/vision" onClick={closeMenu}>
+                      <Link to="/vision" onClick={closeMenu}>
                         Our Vision
                       </Link>
                     </li>

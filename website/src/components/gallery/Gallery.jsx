@@ -60,7 +60,7 @@ const Gallery = () => {
         <div className="modell" onClick={closemodell}>
           <div className="modell-content" onClick={(e) => e.stopPropagation()}>
             <span className="close-btn" onClick={closemodell}>×</span>
-            <img src={currentImage} alt="Zoomed" className="modell-image" />
+            <img src={currentImage} alt="Zoomed" className="modell-image" loading="lazy" />
           </div>
         </div>
       )}

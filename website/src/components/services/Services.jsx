@@ -37,7 +37,7 @@ const Services = () => {
             className="service-card"
             onClick={() => navigate(service.link)} 
           >
-            <img src={service.img} alt={service.title} className="service-img" />
+            <img src={service.img} alt={service.title} className="service-img" loading="lazy" />
             <h4 className="service-title">{service.title}</h4>
           </div>
         ))}

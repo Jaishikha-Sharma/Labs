@@ -43,7 +43,7 @@ const Blogs = () => {
       <div className="blogs-container">
         {blogs.map((blog) => (
           <div key={blog.id} className="blog-card">
-            <img src={blog.img} alt={blog.title} className="blog-img" />
+            <img src={blog.img} alt={blog.title} className="blog-img"  loading="lazy"/>
             <h4 className="blog-title">{blog.title}</h4>
             <p className="blog-description">{blog.description}</p>
           </div>

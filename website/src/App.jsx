@@ -21,6 +21,9 @@ const Dashboard = lazy(() => import("./components/dashboard/Dashboard"));
 const MetalsTesting = lazy(() => import("./components/services/testings/MetalsTesting"));
 const CokeTesting = lazy(() => import("./components/services/testings/CokeTesting"));
 const BuildingAnalysis = lazy(() => import("./components/services/testings/BuildingAnalysis"));
+const Mission = lazy(() => import("./components/about/Mission"));
+const Vision = lazy(() => import("./components/about/Vision"));
+const WhatWeAre = lazy(() => import("./components/about/whatWeAre"));
 
 function App() {
   return (
@@ -44,6 +47,9 @@ function App() {
           <Route path="/metals" element={<MetalsTesting />} />
           <Route path="/coke-testing" element={<CokeTesting />} />
           <Route path="/building-analysis" element={<BuildingAnalysis />} />
+          <Route path="/what-we-are" element={<WhatWeAre />} />
+          <Route path="/mission" element={<Mission />} />
+          <Route path="/vision" element={<Vision />} />
         </Routes>
       </Suspense>
       <ScrollToTop />

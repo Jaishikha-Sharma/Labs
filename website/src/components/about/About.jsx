@@ -23,6 +23,7 @@ const About = () => {
               src="https://i.imgur.com/gdmeAs5.jpeg"
               alt="about"
               className="about-image"
+              loading="lazy"
             />
           </div>
           <div className="col-lg-8">

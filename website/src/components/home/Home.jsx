@@ -23,10 +23,10 @@ const Home = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="/main.avif" className="d-block w-100" alt="..." />
+            <img src="/main.webp" className="d-block w-100" alt="..." loading="lazy" />
           </div>
           <div className="carousel-item">
-            <img src="/lab4.avif" className="d-block w-100" alt="..." />
+            <img src="/lab4.webp" className="d-block w-100" alt="..." loading="lazy" />
           </div>
         </div>
 
@@ -85,7 +85,7 @@ const Home = () => {
             alignItems: "center",
           }}
         >
-          <img src="https://i.imgur.com/k9ZY0S7.png" alt="img" />
+          <img src="https://i.imgur.com/k9ZY0S7.png" alt="img" loading="lazy" />
         </div>
         <div className="col-lg-8">
           <div className="lab-text">

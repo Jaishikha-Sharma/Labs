@@ -11,7 +11,7 @@ const Contact = () => {
     <div>
       {/* Banner Image */}
       <div>
-        <img src={ContactUsImg} alt="Contact-us" style={{ width: "100%" }} />
+        <img src={ContactUsImg} alt="Contact-us" style={{ width: "100%" }}  loading="lazy"/>
       </div>
       {/* Contact Address Section */}
       <div className="contact-container mt-4">
