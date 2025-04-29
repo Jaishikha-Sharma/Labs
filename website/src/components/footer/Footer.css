@@ -64,6 +64,7 @@
 
 .footer-link:hover {
   text-decoration: underline;
+  color: #fff;
 }
 
 .social-icons {
@@ -104,7 +105,7 @@
   .footer-bottom p {
     font-size: 8px;
   }
-  .footer-link{
+  .footer-link {
     font-size: 8px;
   }
 

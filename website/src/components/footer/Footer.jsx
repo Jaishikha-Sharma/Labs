@@ -105,12 +105,12 @@ const Footer = () => {
             ©2024. ECMA Lab. All Rights Reserved.
           </p>
           <div className="d-flex">
-            <a href="/privacy-policy" className="footer-link me-3" style={{color:"white"}}>
+            <Link to="/privacy-policy" className="footer-link me-3">
               Privacy Policy
-            </a>
-            <a href="/terms-condition" className="footer-link" style={{color:"white"}}>
+            </Link>
+            <Link to="/terms-condition" className="footer-link">
               Terms and Conditions
-            </a>
+            </Link>
           </div>
         </Container>
       </div>
