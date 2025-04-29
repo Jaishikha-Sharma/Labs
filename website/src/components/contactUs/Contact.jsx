@@ -11,7 +11,12 @@ const Contact = () => {
     <div>
       {/* Banner Image */}
       <div>
-        <img src={ContactUsImg} alt="Contact-us" style={{ width: "100%" }}  loading="lazy"/>
+        <img
+          src={ContactUsImg}
+          alt="Contact-us"
+          style={{ width: "100%" }}
+          loading="lazy"
+        />
       </div>
       {/* Contact Address Section */}
       <div className="contact-container mt-4">
@@ -71,12 +76,13 @@ const Contact = () => {
           </div>
           <div className="col-lg-4 mt-4">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.301419287929!2d74.30821137489252!3d26.86460736255768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396bdf6896f8d2a3%3A0x4bc0aef9a3131e91!2sS-135%2C%20136%2C%20RIICO%20Industrial%20Area%2C%20Ajmer%20Rd%2C%20Beawar%2C%20Rajasthan%20305901%2C%20India!5e0!3m2!1sen!2sin!4v1713867912427!5m2!1sen!2sin"
+              src="https://www.google.com/maps?q=S-135,%20136,%20RIICO%20Phase-1,%20Beawar%20Gas%20Godown,%20Ajmer%20Road,%20Beawar%20305901&output=embed"
+              allowFullScreen=""
+              loading="lazy"
+              title="ECMA Lab Location"
               width="100%"
               height="330"
               style={{ border: "0", borderRadius: "5px" }}
-              allowFullScreen=""
-              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>

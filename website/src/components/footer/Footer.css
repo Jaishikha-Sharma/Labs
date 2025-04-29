@@ -96,12 +96,17 @@
   margin-bottom: 10px;
   color: #f4f0e5;
 }
+
 @media (max-width: 768px) {
   .footer-heading {
     margin-top: 16px;
   }
-  .footer-bottom {
- display: none;
+  .footer-bottom p {
+    font-size: 8px;
   }
+  .footer-link{
+    font-size: 8px;
+  }
+
 }
 

@@ -23,6 +23,9 @@ const CokeTesting = lazy(() => import("./components/services/testings/CokeTestin
 const BuildingAnalysis = lazy(() => import("./components/services/testings/BuildingAnalysis"));
 const Mission = lazy(() => import("./components/about/Mission"));
 const WhatWeAre = lazy(() => import("./components/about/whatWeAre"));
+const PrivacyPolicy = lazy(() => import("./components/footer/PrivacyPolicy"));
+const TnC = lazy(() => import("./components/footer/TnC"));
+
 
 function App() {
   return (
@@ -48,6 +51,8 @@ function App() {
           <Route path="/building-analysis" element={<BuildingAnalysis />} />
           <Route path="/what-we-are" element={<WhatWeAre />} />
           <Route path="/mission" element={<Mission />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-condition" element={<TnC />} />
         </Routes>
       </Suspense>
       <ScrollToTop />
