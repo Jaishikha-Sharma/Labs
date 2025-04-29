@@ -66,14 +66,12 @@ const TermsAndConditions = () => {
         }
 
         .footer-link {
-          color: #0066cc;
           font-weight: 500;
           text-decoration: none;
         }
 
         .footer-link:hover {
           text-decoration: underline;
-          color: #004d99;
         }
 
         .legal-page .section-divider {

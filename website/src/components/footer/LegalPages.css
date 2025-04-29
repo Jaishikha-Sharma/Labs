@@ -67,14 +67,12 @@
 
 /* Styling for footer links */
 .footer-link {
-    color: #0066cc;
     font-weight: 500;
     text-decoration: none;
 }
 
 .footer-link:hover {
     text-decoration: underline;
-    color: #004d99; /* Hover effect for footer links */
 }
 
 /* Add a subtle divider line between sections */
