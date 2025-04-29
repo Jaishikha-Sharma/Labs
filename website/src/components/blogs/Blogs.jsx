@@ -1,5 +1,6 @@
 import React from "react";
 import "./Blogs.css";
+import { Link } from "react-router-dom";
 
 const blogs = [
   {
@@ -8,7 +9,7 @@ const blogs = [
     img: "https://i.imgur.com/pRM0U82.jpeg",
     description:
       "Learn why testing labs are crucial for ensuring quality and compliance across industries.",
-    link: "/blog/testing-lab",
+    link: "/testing-lab-blog",
   },
   {
     id: 2,
@@ -16,7 +17,7 @@ const blogs = [
     img: "https://i.imgur.com/4Ixnddk.jpeg",
     description:
       "Discover how water testing helps maintain purity and prevents contamination risks.",
-    link: "/blog/water-testing",
+    link: "/water-testing-blog",
   },
   {
     id: 3,
@@ -24,7 +25,7 @@ const blogs = [
     img: "https://i.imgur.com/p4FU48L.jpeg",
     description:
       "Find out how soil testing plays a vital role in modern farming and sustainability.",
-    link: "/blog/soil-testing",
+    link: "/soil-testing-blog",
   },
   {
     id: 4,
@@ -32,20 +33,30 @@ const blogs = [
     img: "https://i.imgur.com/qRzxJNn.jpeg",
     description:
       "Explore the significance of food testing in preventing contamination and maintaining health standards.",
-    link: "/blog/food-testing",
+    link: "/food-testing-blog",
   },
 ];
 
 const Blogs = () => {
   return (
     <div>
-      <h3 style={{marginTop:"30px"}} className="blog-heading">Latest Blogs</h3>
+      <h3 style={{ marginTop: "30px" }} className="blog-heading">
+        Latest Blogs
+      </h3>
       <div className="blogs-container">
         {blogs.map((blog) => (
           <div key={blog.id} className="blog-card">
-            <img src={blog.img} alt={blog.title} className="blog-img"  loading="lazy"/>
+            <img
+              src={blog.img}
+              alt={blog.title}
+              className="blog-img"
+              loading="lazy"
+            />
             <h4 className="blog-title">{blog.title}</h4>
             <p className="blog-description">{blog.description}</p>
+            <Link to={blog.link} className="read-more-link">
+              👉 Read More
+            </Link>
           </div>
         ))}
       </div>

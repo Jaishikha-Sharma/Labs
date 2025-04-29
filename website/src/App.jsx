@@ -25,6 +25,10 @@ const Mission = lazy(() => import("./components/about/Mission"));
 const WhatWeAre = lazy(() => import("./components/about/whatWeAre"));
 const PrivacyPolicy = lazy(() => import("./components/footer/PrivacyPolicy"));
 const TnC = lazy(() => import("./components/footer/TnC"));
+const TestingLab = lazy(() => import("./components/blogs/pages/TestingLabBlog"));
+const WaterTestingBlog = lazy(() => import("./components/blogs/pages/WaterTestingBlog"));
+const SoilTestingBlog = lazy(() => import("./components/blogs/pages/SoilTestingBlog"));
+const FoodTestingBlog = lazy(() => import("./components/blogs/pages/FoodTestingBlog"));
 
 
 function App() {
@@ -53,6 +57,10 @@ function App() {
           <Route path="/mission" element={<Mission />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-condition" element={<TnC />} />
+          <Route path="/testing-lab-blog" element={<TestingLab />} />
+          <Route path="/water-testing-blog" element={<WaterTestingBlog />} />
+          <Route path="/soil-testing-blog" element={<SoilTestingBlog />} />
+          <Route path="/food-testing-blog" element={<FoodTestingBlog />} />
         </Routes>
       </Suspense>
       <ScrollToTop />
