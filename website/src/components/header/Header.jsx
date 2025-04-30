@@ -89,9 +89,9 @@ const Header = () => {
                   </Link>
                 </li>
               )}
-             <li className="nav-link" style={{ "--i": "1.35s" }}>
+              <li className="nav-link" style={{ "--i": "1.35s" }}>
                 <Link to="/about" onClick={closeMenu}>
-                  About
+                  About Us
                   <i className="fas fa-caret-down"></i>
                 </Link>
                 <div className="dropdown">
@@ -184,6 +184,7 @@ const Header = () => {
           />
           {isLoggedIn ? (
             <div className="profile-info">
+              <span className="greeting">Hi!</span>
               <button className="logout-btn" onClick={handleLogout}>
                 Logout
               </button>

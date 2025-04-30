@@ -82,13 +82,14 @@ header {
 /* Adjust search input */
 .search-input {
   padding: 8px 12px;
-  border: 1px solid #c4a484;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   outline: none;
   font-size: 14px;
-  color: #333;
+  color: #000000;
   transition: width 0.3s ease;
   width: 200px;
+  background: #e8d296;
 }
 
 
@@ -109,27 +110,6 @@ header {
   font-size: 18px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .search-profile {
-    gap: 6px;
-  }
-
-  .search-input {
-    width: 140px;
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-
-  .profile-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .profile-icon i {
-    font-size: 16px;
-  }
-}
 
 @media (max-width: 480px) {
   @media (max-width: 768px) {
@@ -501,10 +481,10 @@ header {
     transition: .7s;
   }
   .logout-btn {
-    width: 100%;
+    width: 50%;
     text-align: center;
     padding: 10px;
-    margin-left: 61px;
+    margin-left: 111px;
 }
 }
 html, body {
@@ -563,5 +543,13 @@ html, body {
   .top-contact-bar {
     padding: 10px;
   }
+  .greeting {
+ display: none;
+  }
+}
+.greeting {
+  color: white;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
