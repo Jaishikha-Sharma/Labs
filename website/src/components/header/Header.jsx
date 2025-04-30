@@ -91,7 +91,7 @@ const Header = () => {
               )}
               <li className="nav-link" style={{ "--i": "1.35s" }}>
                 <Link to="/about" onClick={closeMenu}>
-                  About Us
+                  About
                   <i className="fas fa-caret-down"></i>
                 </Link>
                 <div className="dropdown">
