@@ -7,11 +7,35 @@ const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [name, setName] = useState("");
+  const [showMobileSearch, setShowMobileSearch] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
   const navigate = useNavigate();
+
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "Dashboard", path: "/dashboard" },
+    { name: "About", path: "/about" },
+    { name: "What We Are", path: "/what-we-are" },
+    { name: "Our Mission", path: "/mission" },
+    { name: "Services", path: "/services" },
+    { name: "Water Testing", path: "/water-Testing" },
+    { name: "Soil Testing", path: "/soil-testing" },
+    { name: "Food Testing", path: "/food-testing" },
+    { name: "Metal & Alloy Testing", path: "/metals" },
+    { name: "Environmental Testing", path: "/Enviornment-testing" },
+    { name: "Coal & Coke Testing", path: "/coke-testing" },
+    { name: "Building-analysis", path: "/building-analysis" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Certificates", path: "/certificates" },
+    { name: "Blogs", path: "/blogs" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   const closeMenu = () => {
     document.getElementById("check").checked = false;
   };
+
   const handleAuth = ({ token, name }) => {
     if (token) {
       localStorage.setItem("token", token);
@@ -20,6 +44,7 @@ const Header = () => {
       setName(name || "User");
     }
   };
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("name");
@@ -27,6 +52,7 @@ const Header = () => {
     setName("");
     navigate("/");
   };
+
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
     const storedName = localStorage.getItem("name");
@@ -36,6 +62,25 @@ const Header = () => {
       setName(storedName || "User");
     }
   }, []);
+
+  useEffect(() => {
+    if (searchQuery.trim() === "") {
+      setSearchResults([]);
+    } else {
+      const results = menuItems.filter((item) =>
+        item.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setSearchResults(results);
+    }
+  }, [searchQuery]);
+
+  const handleSearchResultClick = (path) => {
+    navigate(path);
+    setSearchQuery("");
+    setSearchResults([]);
+    setShowMobileSearch(false);
+    closeMenu();
+  };
 
   return (
     <header>
@@ -47,64 +92,56 @@ const Header = () => {
           <span>
             <i className="fas fa-envelope"></i> ecmalab2021@gmail.com
           </span>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram"></i>
           </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-facebook-f"></i>
           </a>
         </div>
       </div>
+
       <div className="container">
         <input type="checkbox" name="check" id="check" />
+
         <div className="logo-container">
           <Link to="/" onClick={closeMenu}>
             <img src="/logoHome.png" alt="logo" style={{ width: "70px" }} />
           </Link>
         </div>
+
+        {/* Mobile Search Icon */}
+        <div className="mobile-search-icon">
+          <i
+            className="fas fa-search"
+            onClick={() => setShowMobileSearch(!showMobileSearch)}
+          ></i>
+        </div>
+
         <div className="nav-btn">
           <div className="nav-links">
             <ul>
               <li className="nav-link" style={{ "--i": ".6s" }}>
-                <Link to="/" onClick={closeMenu}>
-                  Home
-                </Link>
+                <Link to="/" onClick={closeMenu}>Home</Link>
               </li>
               {isLoggedIn && (
                 <li className="nav-link" style={{ "--i": "1.35s" }}>
-                  <Link
-                    style={{ color: "white" }}
-                    to="/dashboard"
-                    onClick={closeMenu}
-                  >
+                  <Link to="/dashboard" onClick={closeMenu} style={{ color: "white" }}>
                     Dashboard
                   </Link>
                 </li>
               )}
               <li className="nav-link" style={{ "--i": "1.35s" }}>
                 <Link to="/about" onClick={closeMenu}>
-                  About
-                  <i className="fas fa-caret-down"></i>
+                  About <i className="fas fa-caret-down"></i>
                 </Link>
                 <div className="dropdown">
                   <ul>
                     <li className="dropdown-link">
-                      <Link to="/what-we-are" onClick={closeMenu}>
-                        What We Are
-                      </Link>
+                      <Link to="/what-we-are" onClick={closeMenu}>What We Are</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/mission" onClick={closeMenu}>
-                        Our Mission
-                      </Link>
+                      <Link to="/mission" onClick={closeMenu}>Our Mission</Link>
                     </li>
                   </ul>
                 </div>
@@ -116,96 +153,112 @@ const Header = () => {
                 <div className="dropdown">
                   <ul>
                     <li className="dropdown-link">
-                      <Link to="/water-Testing" onClick={closeMenu}>
-                        Water Testing
-                      </Link>
+                      <Link to="/water-Testing" onClick={closeMenu}>Water Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/soil-testing" onClick={closeMenu}>
-                        Soil Testing
-                      </Link>
+                      <Link to="/soil-testing" onClick={closeMenu}>Soil Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/food-testing" onClick={closeMenu}>
-                        Food Testing
-                      </Link>
+                      <Link to="/food-testing" onClick={closeMenu}>Food Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/metals" onClick={closeMenu}>
-                        Metal & Alloy Testing
-                      </Link>
+                      <Link to="/metals" onClick={closeMenu}>Metal & Alloy Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/Enviornment-testing" onClick={closeMenu}>
-                        Enviornmental Testing
-                      </Link>
+                      <Link to="/Enviornment-testing" onClick={closeMenu}>Environmental Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/coke-testing" onClick={closeMenu}>
-                        Coal & Coke Testing
-                      </Link>
+                      <Link to="/coke-testing" onClick={closeMenu}>Coal & Coke Testing</Link>
                     </li>
                     <li className="dropdown-link">
-                      <Link to="/building-analysis" onClick={closeMenu}>
-                        Building-analysis
-                      </Link>
+                      <Link to="/building-analysis" onClick={closeMenu}>Building-analysis</Link>
                     </li>
                   </ul>
                 </div>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/gallery" onClick={closeMenu}>
-                  Gallery
-                </Link>
+                <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/certificates" onClick={closeMenu}>
-                  Certificates
-                </Link>
+                <Link to="/certificates" onClick={closeMenu}>Certificates</Link>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/blogs" onClick={closeMenu}>
-                  Blogs
-                </Link>
+                <Link to="/blogs" onClick={closeMenu}>Blogs</Link>
               </li>
               <li className="nav-link" style={{ "--i": "1.35s" }}>
-                <Link to="/contact" onClick={closeMenu}>
-                  Contact
-                </Link>
+                <Link to="/contact" onClick={closeMenu}>Contact</Link>
               </li>
             </ul>
           </div>
         </div>
+
         <div className="search-profile">
           <input
             type="text"
             className="search-input"
             placeholder="Type to start search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
+          {searchResults.length > 0 && (
+            <div className="search-results">
+              <ul>
+                {searchResults.map((item, index) => (
+                  <li key={index} onClick={() => handleSearchResultClick(item.path)}>
+                    {item.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           {isLoggedIn ? (
             <div className="profile-info">
               <span className="greeting">Hi!</span>
-              <button className="logout-btn" onClick={handleLogout}>
-                Logout
-              </button>
+              <button className="logout-btn" onClick={handleLogout}>Logout</button>
             </div>
           ) : (
-            
             <div className="profile-icon" onClick={() => setIsModalOpen(true)}>
               <i className="fas fa-user"></i>
             </div>
-            
           )}
         </div>
+
         <div className="hamburger-menu-container">
           <div className="hamburger-menu">
             <div></div>
           </div>
         </div>
       </div>
+
+      {/* Mobile Search Input */}
+      {showMobileSearch && (
+        <div className="mobile-search-bar">
+          <input
+            type="text"
+            className="mobile-search-input"
+            placeholder="Search..."
+            autoFocus
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          {searchResults.length > 0 && (
+            <div className="search-results">
+              <ul>
+                {searchResults.map((item, index) => (
+                  <li key={index} onClick={() => handleSearchResultClick(item.path)}>
+                    {item.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Auth Modal */}
       {isModalOpen && (
         <AuthModal onClose={() => setIsModalOpen(false)} onAuth={handleAuth} />
-      )}{" "}
+      )}
     </header>
   );
 };

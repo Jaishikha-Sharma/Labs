@@ -15,9 +15,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 app.use(cors({
-  origin: ["http://localhost:5174", "https://auth-backend-ombp.onrender.com"],
+  origin: ["http://localhost:5173", "https://auth-backend-ombp.onrender.com" , "https://labs-ebon.vercel.app" , "https://www.ecmalab.com"],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
