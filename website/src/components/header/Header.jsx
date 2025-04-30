@@ -190,9 +190,11 @@ const Header = () => {
               </button>
             </div>
           ) : (
+            
             <div className="profile-icon" onClick={() => setIsModalOpen(true)}>
               <i className="fas fa-user"></i>
             </div>
+            
           )}
         </div>
         <div className="hamburger-menu-container">
