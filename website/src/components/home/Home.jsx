@@ -11,7 +11,8 @@ const Home = () => {
       {/* Scrolling Marquee */}
       <div className="marquee-container">
         <marquee className="marquee-text">
-       
+          Comprehensive Testing for Soil, Water, Environment, Minerals, and Ores
+          - Your Trusted Partner in Quality Assurance
         </marquee>
       </div>
       <div
@@ -22,7 +23,7 @@ const Home = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="/main.wbp" className="d-block w-100" alt="..." />
+            <img src="/main.webp" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
             <img src="/lab4.webp" className="d-block w-100" alt="..." />
@@ -77,7 +78,12 @@ const Home = () => {
       </div>
       <div className="row mt-5">
         <div
-         
+          className="col-lg-4"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
           <img src="https://i.imgur.com/k9ZY0S7.png" alt="img" />
         </div>
